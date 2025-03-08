@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { norwester } from './fonts';
-
-const inter = Inter({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Tech Lumina - Web Application Development",
@@ -20,11 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={norwester.variable}>
-      <body className={`${inter.className} antialiased`}>
+      <body className="font-norwester antialiased">
         <Navbar />
         <main className="min-h-screen pt-16">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

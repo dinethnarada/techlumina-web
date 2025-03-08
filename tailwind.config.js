@@ -8,9 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'deep-blue': '#0A0F5E',
-        'vibrant-purple': '#4B0082',
-        'electric-teal': '#00D4C0',
+        'light-gray': '#eff5fa',
+        'navy': '#141c33',
+        'blue-gray': '#2f456f',
+        'medium-blue': '#5374ac',
+        'mint': '#8afdd0',
       },
       fontFamily: {
         'norwester': ['var(--font-norwester)', 'sans-serif'],

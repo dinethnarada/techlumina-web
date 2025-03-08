@@ -43,36 +43,36 @@ export default function Projects() {
   return (
     <div className="min-h-screen">
       {/* Projects Hero Section */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-20 px-6 sm:px-8 md:px-12 bg-navy">
         <div className="max-w-7xl mx-auto">
-          <h1 className="section-title text-center">Our Projects</h1>
-          <p className="text-xl text-white/80 text-center mb-12 max-w-3xl mx-auto">
+          <h1 className="section-title text-center text-light-gray !text-light-gray">Our Projects</h1>
+          <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
             Explore our portfolio of successful projects where we've helped businesses transform their digital presence.
           </p>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-6 sm:px-8 md:px-12 bg-light-gray">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="card group hover:transform hover:scale-105 transition-all duration-300">
-                <div className="h-48 relative mb-6 rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 tech-gradient opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="h-48 relative mb-6 rounded-lg overflow-hidden bg-navy">
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy group-hover:opacity-50 transition-opacity"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-electric-teal text-5xl opacity-20 group-hover:opacity-40 transition-opacity">
+                    <span className="text-light-gray text-5xl opacity-20 group-hover:opacity-40 transition-opacity">
                       {project.category[0]}
                     </span>
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-electric-teal">{project.title}</h3>
-                <p className="text-white/70 mb-4">{project.description}</p>
+                <h3 className="text-2xl font-semibold mb-3 text-navy">{project.title}</h3>
+                <p className="text-blue-gray mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 rounded-full bg-deep-blue/30 text-electric-teal text-sm"
+                      className="px-3 py-1 rounded-full bg-navy/10 text-medium-blue text-sm"
                     >
                       {tech}
                     </span>
@@ -85,35 +85,35 @@ export default function Projects() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 px-4 bg-deep-blue/30">
+      <section className="py-20 px-4 bg-navy">
         <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center">Technologies We Use</h2>
+          <h2 className="section-title text-center text-light-gray">Technologies We Use</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="card text-center">
-              <h3 className="text-xl font-semibold mb-2 text-electric-teal">Frontend</h3>
-              <p className="text-white/70">React, Vue, Angular, Next.js</p>
+              <h3 className="text-xl font-semibold mb-2 text-light-gray">Frontend</h3>
+              <p className="text-light-gray/80">React, Vue, Angular, Next.js</p>
             </div>
             <div className="card text-center">
-              <h3 className="text-xl font-semibold mb-2 text-electric-teal">Backend</h3>
-              <p className="text-white/70">Node.js, Python, Java, Go</p>
+              <h3 className="text-xl font-semibold mb-2 text-light-gray">Backend</h3>
+              <p className="text-light-gray/80">Node.js, Python, Java, Go</p>
             </div>
             <div className="card text-center">
-              <h3 className="text-xl font-semibold mb-2 text-electric-teal">Database</h3>
-              <p className="text-white/70">MongoDB, PostgreSQL, Redis</p>
+              <h3 className="text-xl font-semibold mb-2 text-light-gray">Database</h3>
+              <p className="text-light-gray/80">MongoDB, PostgreSQL, Redis</p>
             </div>
             <div className="card text-center">
-              <h3 className="text-xl font-semibold mb-2 text-electric-teal">Cloud</h3>
-              <p className="text-white/70">AWS, GCP, Azure, Vercel</p>
+              <h3 className="text-xl font-semibold mb-2 text-light-gray">Cloud</h3>
+              <p className="text-light-gray/80">AWS, GCP, Azure, Vercel</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-6 sm:px-8 md:px-12 bg-light-gray">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="section-title">Have a Project in Mind?</h2>
-          <p className="text-xl text-white/80 mb-8">
+          <p className="text-xl text-blue-gray mb-8">
             Let's discuss how we can help you achieve your digital goals.
           </p>
           <a href="/contact" className="button">
