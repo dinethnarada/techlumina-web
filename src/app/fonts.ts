@@ -5,3 +5,14 @@ export const norwester = localFont({
   display: 'swap',
   variable: '--font-norwester'
 })
+
+export const eightgon = localFont({
+  src: [
+    {
+      path: './fonts/SuperchargeStraightCondensed.otf',
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-eightgon'
+})
