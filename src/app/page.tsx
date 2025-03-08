@@ -7,13 +7,13 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 tech-gradient opacity-20"></div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">
+          <h1 className="text-6xl md:text-7xl font-bold mb-4 font-norwester">
             <span className="text-electric-teal">Tech Lumina</span>
             <br />
             Web Solutions
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/80">
-            Transforming Ideas into Powerful Web Applications
+          <p className="text-2xl md:text-3xl mb-8 text-electric-teal font-norwester tracking-wide">
+            Crafting Tomorrow&apos;s Websites, Today
           </p>
           <a href="/contact" className="button">
             Get Started

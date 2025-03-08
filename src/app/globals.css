@@ -13,7 +13,10 @@ body {
   background: linear-gradient(135deg, var(--deep-blue), var(--vibrant-purple));
   color: var(--white);
   min-height: 100vh;
-  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-norwester);
 }
 
 @layer components {
@@ -23,6 +26,7 @@ body {
 
   .nav-link {
     @apply px-4 py-2 rounded-lg transition-all duration-300;
+    font-family: var(--font-norwester);
   }
   .nav-link:hover {
     @apply bg-white/10;
@@ -31,6 +35,7 @@ body {
   .section-title {
     @apply text-4xl font-bold mb-8 text-white;
     text-shadow: 0 0 20px rgba(0, 212, 192, 0.5);
+    font-family: var(--font-norwester);
   }
 
   .card {
@@ -41,7 +46,8 @@ body {
   }
 
   .button {
-    @apply px-6 py-3 rounded-lg bg-electric-teal text-deep-blue font-semibold transition-all duration-300;
+    @apply px-6 py-3 rounded-lg bg-electric-teal text-deep-blue transition-all duration-300;
+    font-family: var(--font-norwester);
   }
   .button:hover {
     @apply bg-white;

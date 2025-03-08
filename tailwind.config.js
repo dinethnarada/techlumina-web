@@ -12,6 +12,9 @@ module.exports = {
         'vibrant-purple': '#4B0082',
         'electric-teal': '#00D4C0',
       },
+      fontFamily: {
+        'norwester': ['var(--font-norwester)', 'sans-serif'],
+      },
       spacing: {
         '128': '32rem',
       },
@@ -36,5 +39,6 @@ module.exports = {
     'border-deep-blue',
     'border-vibrant-purple',
     'border-electric-teal',
+    'font-norwester',
   ],
 }
