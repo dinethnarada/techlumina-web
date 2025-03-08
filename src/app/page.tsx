@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import TypewriterText from '@/components/TypewriterText';
+import LogoText from '@/components/LogoText';
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy"></div>
         <div className="relative z-10 text-center px-4">
           <h1 className="text-6xl md:text-7xl font-bold mb-4 font-norwester">
-            <span className="text-light-gray">Tech Lumina</span>
-            <br />
-            <span className="text-light-gray">Web Solutions</span>
+            <LogoText />
           </h1>
           <p className="text-2xl md:text-3xl mb-8 font-norwester tracking-wide">
             <TypewriterText 

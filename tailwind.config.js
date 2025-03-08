@@ -29,8 +29,10 @@ module.exports = {
       animation: {
         'shine': 'shine 4s linear infinite',
         'shine-delayed': 'shine 4s linear 0.5s infinite',
-        'glow-line': 'glow-line 3s ease-in-out infinite',
-        'glow-line-delayed': 'glow-line 3s ease-in-out 0.5s infinite',
+        'glow-line': 'glow-line 2s ease-in-out infinite',
+        'glow-line-delayed': 'glow-line 2s ease-in-out 0.5s infinite',
+        'letter-glow': 'letter-glow 5s ease-in-out infinite',
+        'letter-glow-delayed': 'letter-glow 5s ease-in-out infinite',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'blink': 'blink 1s step-end infinite',
       },
@@ -42,28 +44,55 @@ module.exports = {
         'glow-line': {
           '0%': {
             opacity: '0',
-            transform: 'translateX(-100%) skewX(-15deg)',
-            width: '50%'
+            transform: 'translateX(-100%) skewX(-20deg)',
+            width: '80%',
+            background: 'linear-gradient(90deg, transparent, rgba(47,69,111,0.2), rgba(83,116,172,0.4), rgba(239,245,250,0.6), rgba(83,116,172,0.4), rgba(47,69,111,0.2), transparent)'
           },
-          '30%': {
-            opacity: '0.5',
-            transform: 'translateX(-30%) skewX(-15deg)',
-            width: '50%'
+          '25%': {
+            opacity: '0.9',
+            transform: 'translateX(-50%) skewX(-20deg)',
+            width: '80%',
+            background: 'linear-gradient(90deg, transparent, rgba(47,69,111,0.3), rgba(83,116,172,0.5), rgba(239,245,250,0.7), rgba(83,116,172,0.5), rgba(47,69,111,0.3), transparent)'
           },
           '50%': {
-            opacity: '0.7',
-            transform: 'translateX(0%) skewX(-15deg)',
-            width: '50%'
+            opacity: '1',
+            transform: 'translateX(0%) skewX(-20deg)',
+            width: '80%',
+            background: 'linear-gradient(90deg, transparent, rgba(47,69,111,0.4), rgba(83,116,172,0.6), rgba(239,245,250,0.8), rgba(83,116,172,0.6), rgba(47,69,111,0.4), transparent)'
           },
-          '70%': {
-            opacity: '0.5',
-            transform: 'translateX(30%) skewX(-15deg)',
-            width: '50%'
+          '75%': {
+            opacity: '0.9',
+            transform: 'translateX(50%) skewX(-20deg)',
+            width: '80%',
+            background: 'linear-gradient(90deg, transparent, rgba(47,69,111,0.3), rgba(83,116,172,0.5), rgba(239,245,250,0.7), rgba(83,116,172,0.5), rgba(47,69,111,0.3), transparent)'
           },
           '100%': {
             opacity: '0',
-            transform: 'translateX(100%) skewX(-15deg)',
-            width: '50%'
+            transform: 'translateX(100%) skewX(-20deg)',
+            width: '80%',
+            background: 'linear-gradient(90deg, transparent, rgba(47,69,111,0.2), rgba(83,116,172,0.4), rgba(239,245,250,0.6), rgba(83,116,172,0.4), rgba(47,69,111,0.2), transparent)'
+          }
+        },
+        'letter-glow': {
+          '0%, 100%': {
+            opacity: '0.2',
+            filter: 'blur(0px)',
+            textShadow: '0 0 4px rgba(47,69,111,0.3), 0 0 8px rgba(83,116,172,0.3), 0 0 12px rgba(239,245,250,0.2)'
+          },
+          '20%, 80%': {
+            opacity: '0.6',
+            filter: 'blur(0.5px)',
+            textShadow: '0 0 8px rgba(47,69,111,0.5), 0 0 12px rgba(83,116,172,0.5), 0 0 16px rgba(239,245,250,0.3)'
+          },
+          '40%, 60%': {
+            opacity: '0.8',
+            filter: 'blur(0.75px)',
+            textShadow: '0 0 12px rgba(47,69,111,0.7), 0 0 16px rgba(83,116,172,0.7), 0 0 20px rgba(239,245,250,0.4)'
+          },
+          '50%': {
+            opacity: '1',
+            filter: 'blur(1px)',
+            textShadow: '0 0 16px rgba(47,69,111,0.9), 0 0 20px rgba(83,116,172,0.9), 0 0 24px rgba(239,245,250,0.5)'
           }
         },
         blink: {
