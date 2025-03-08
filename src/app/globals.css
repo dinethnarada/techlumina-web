@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --deep-blue: #0A0F5E;
+  --vibrant-purple: #4B0082;
+  --electric-teal: #00D4C0;
+  --white: #FFFFFF;
+}
+
+body {
+  background: linear-gradient(135deg, var(--deep-blue), var(--vibrant-purple));
+  color: var(--white);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+@layer components {
+  .tech-gradient {
+    background: linear-gradient(135deg, var(--deep-blue), var(--vibrant-purple), var(--electric-teal));
+  }
+
+  .nav-link {
+    @apply px-4 py-2 rounded-lg transition-all duration-300;
+  }
+  .nav-link:hover {
+    @apply bg-white/10;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold mb-8 text-white;
+    text-shadow: 0 0 20px rgba(0, 212, 192, 0.5);
+  }
+
+  .card {
+    @apply bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 transition-all duration-300;
+  }
+  .card:hover {
+    @apply border-electric-teal/50;
+  }
+
+  .button {
+    @apply px-6 py-3 rounded-lg bg-electric-teal text-deep-blue font-semibold transition-all duration-300;
+  }
+  .button:hover {
+    @apply bg-white;
+  }
+}
