@@ -26,6 +26,9 @@ module.exports = {
         '35': '0.35',
         '65': '0.65',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       animation: {
         'shine': 'shine 4s linear infinite',
         'shine-delayed': 'shine 4s linear 0.5s infinite',
@@ -35,6 +38,8 @@ module.exports = {
         'letter-glow-delayed': 'letter-glow 5s ease-in-out infinite',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'blink': 'blink 1s step-end infinite',
+        'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
+        'gradient-shift-delayed': 'gradient-shift 8s ease-in-out infinite 4s',
       },
       keyframes: {
         shine: {
@@ -93,6 +98,24 @@ module.exports = {
             opacity: '1',
             filter: 'blur(1px)',
             textShadow: '0 0 16px rgba(47,69,111,0.9), 0 0 20px rgba(83,116,172,0.9), 0 0 24px rgba(239,245,250,0.5)'
+          }
+        },
+        'gradient-shift': {
+          '0%, 100%': {
+            transform: 'translate(0%, 0%) rotate(0deg)',
+            opacity: '0.5'
+          },
+          '25%': {
+            transform: 'translate(10%, -10%) rotate(90deg)',
+            opacity: '0.75'
+          },
+          '50%': {
+            transform: 'translate(0%, 0%) rotate(180deg)',
+            opacity: '1'
+          },
+          '75%': {
+            transform: 'translate(-10%, 10%) rotate(270deg)',
+            opacity: '0.75'
           }
         },
         blink: {
