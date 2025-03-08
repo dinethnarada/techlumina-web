@@ -6,24 +6,24 @@ const Navbar = () => {
   const pathname = usePathname();
   
   return (
-    <nav className="fixed w-full bg-deep-blue/30 backdrop-blur-lg border-b border-white/10 z-50">
+    <nav className="fixed w-full bg-navy shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-electric-teal">Tech Lumina</span>
+            <span className="text-2xl font-bold text-light-gray">Tech Lumina</span>
           </Link>
           
           <div className="flex space-x-4">
-            <Link href="/" className={`nav-link ${pathname === '/' ? 'bg-white/10' : ''}`}>
+            <Link href="/" className={`nav-link ${pathname === '/' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
               Home
             </Link>
-            <Link href="/about" className={`nav-link ${pathname === '/about' ? 'bg-white/10' : ''}`}>
+            <Link href="/about" className={`nav-link ${pathname === '/about' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
               About
             </Link>
-            <Link href="/projects" className={`nav-link ${pathname === '/projects' ? 'bg-white/10' : ''}`}>
+            <Link href="/projects" className={`nav-link ${pathname === '/projects' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
               Projects
             </Link>
-            <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'bg-white/10' : ''}`}>
+            <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
               Contact
             </Link>
           </div>

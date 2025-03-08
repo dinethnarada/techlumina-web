@@ -27,37 +27,37 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Contact Hero Section */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-20 px-6 sm:px-8 md:px-12 bg-navy">
         <div className="max-w-7xl mx-auto">
-          <h1 className="section-title text-center">Get in Touch</h1>
-          <p className="text-xl text-white/80 text-center mb-12 max-w-3xl mx-auto">
+          <h1 className="section-title text-center text-light-gray !text-light-gray">Get in Touch</h1>
+          <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
             Ready to start your next project? Contact us today and let's discuss how we can help bring your vision to life.
           </p>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-6 sm:px-8 md:px-12 bg-light-gray">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-semibold mb-4 text-electric-teal">Contact Information</h2>
+                <h2 className="text-2xl font-semibold mb-4 text-navy">Contact Information</h2>
                 <div className="space-y-4">
-                  <p className="flex items-center space-x-3 text-white/80">
-                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-electric-teal/20">
+                  <p className="flex items-center space-x-3 text-blue-gray">
+                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📍
                     </span>
                     <span>123 Tech Street, Silicon Valley, CA</span>
                   </p>
-                  <p className="flex items-center space-x-3 text-white/80">
-                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-electric-teal/20">
+                  <p className="flex items-center space-x-3 text-blue-gray">
+                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📧
                     </span>
                     <span>contact@techlumina.com</span>
                   </p>
-                  <p className="flex items-center space-x-3 text-white/80">
-                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-electric-teal/20">
+                  <p className="flex items-center space-x-3 text-blue-gray">
+                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📱
                     </span>
                     <span>+1 (555) 123-4567</span>
@@ -66,8 +66,8 @@ export default function Contact() {
               </div>
               
               <div>
-                <h2 className="text-2xl font-semibold mb-4 text-electric-teal">Office Hours</h2>
-                <div className="space-y-2 text-white/80">
+                <h2 className="text-2xl font-semibold mb-4 text-navy">Office Hours</h2>
+                <div className="space-y-2 text-blue-gray">
                   <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                   <p>Saturday: By appointment</p>
                   <p>Sunday: Closed</p>
@@ -77,7 +77,7 @@ export default function Contact() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-blue-gray mb-2">
                   Name
                 </label>
                 <input
@@ -87,13 +87,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 focus:border-electric-teal focus:outline-none text-white"
+                  className="w-full px-4 py-2 rounded-lg bg-navy/5 border border-navy/10 focus:border-medium-blue focus:outline-none text-navy"
                   placeholder="Your name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-blue-gray mb-2">
                   Email
                 </label>
                 <input
@@ -103,13 +103,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 focus:border-electric-teal focus:outline-none text-white"
+                  className="w-full px-4 py-2 rounded-lg bg-navy/5 border border-navy/10 focus:border-medium-blue focus:outline-none text-navy"
                   placeholder="your@email.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-blue-gray mb-2">
                   Company
                 </label>
                 <input
@@ -118,13 +118,13 @@ export default function Contact() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 focus:border-electric-teal focus:outline-none text-white"
+                  className="w-full px-4 py-2 rounded-lg bg-navy/5 border border-navy/10 focus:border-medium-blue focus:outline-none text-navy"
                   placeholder="Your company name"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-blue-gray mb-2">
                   Message
                 </label>
                 <textarea
@@ -134,7 +134,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 focus:border-electric-teal focus:outline-none text-white"
+                  className="w-full px-4 py-2 rounded-lg bg-navy/5 border border-navy/10 focus:border-medium-blue focus:outline-none text-navy"
                   placeholder="Tell us about your project"
                 />
               </div>
@@ -151,12 +151,12 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 px-4 bg-deep-blue/30">
+      <section className="py-20 px-4 bg-navy">
         <div className="max-w-7xl mx-auto">
-          <div className="h-[400px] rounded-xl overflow-hidden relative">
-            <div className="absolute inset-0 tech-gradient opacity-30"></div>
+          <div className="h-[400px] rounded-xl overflow-hidden relative bg-medium-blue/10">
+            <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy"></div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-xl text-white/50">Map will be integrated here</div>
+              <div className="text-xl text-light-gray/50">Map will be integrated here</div>
             </div>
           </div>
         </div>

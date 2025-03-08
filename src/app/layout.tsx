@@ -1,29 +1,30 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
+import Footer from "@/components/Footer";
+import { norwester } from './fonts';
+import PageTransition from '@/components/PageTransition';
 
 export const metadata: Metadata = {
-  title: "Tech Lumina - Web Application Development",
-  description: "Tech Lumina creates cutting-edge web applications tailored to your business needs",
+  title: 'Tech Lumina',
+  description: "Crafting Tomorrow's Websites, Today",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en" className={norwester.variable}>
+      <body className="font-norwester antialiased">
         <Navbar />
         <main className="min-h-screen pt-16">
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
         </main>
+        <Footer />
       </body>
     </html>
   );

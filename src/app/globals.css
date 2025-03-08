@@ -1,49 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
-  --deep-blue: #0A0F5E;
-  --vibrant-purple: #4B0082;
-  --electric-teal: #00D4C0;
-  --white: #FFFFFF;
+  --light-gray: #eff5fa;
+  --navy: #141c33;
+  --blue-gray: #2f456f;
+  --medium-blue: #5374ac;
+
 }
 
 body {
-  background: linear-gradient(135deg, var(--deep-blue), var(--vibrant-purple));
-  color: var(--white);
+  background: var(--light-gray);
+  color: var(--navy);
   min-height: 100vh;
-  font-family: 'Inter', sans-serif;
 }
 
-@layer components {
-  .tech-gradient {
-    background: linear-gradient(135deg, var(--deep-blue), var(--vibrant-purple), var(--electric-teal));
-  }
+/* Responsive section padding */
+section {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
-  .nav-link {
-    @apply px-4 py-2 rounded-lg transition-all duration-300;
+@media (max-width: 640px) {
+  section {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
-  .nav-link:hover {
-    @apply bg-white/10;
-  }
+}
 
-  .section-title {
-    @apply text-4xl font-bold mb-8 text-white;
-    text-shadow: 0 0 20px rgba(0, 212, 192, 0.5);
+@media (max-width: 480px) {
+  section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
+}
 
-  .card {
-    @apply bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 transition-all duration-300;
-  }
-  .card:hover {
-    @apply border-electric-teal/50;
-  }
+.tech-gradient {
+  background: linear-gradient(135deg, var(--navy), var(--medium-blue));
+}
 
-  .button {
-    @apply px-6 py-3 rounded-lg bg-electric-teal text-deep-blue font-semibold transition-all duration-300;
-  }
-  .button:hover {
-    @apply bg-white;
-  }
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 300ms;
+  color: var(--light-gray);
+}
+
+.nav-link:hover {
+  background-color: rgba(83, 116, 172, 0.1);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--navy);
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(83, 116, 172, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 300ms;
+}
+
+.card:hover {
+  border-color: var(--medium-blue);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--medium-blue);
+  color: var(--light-gray);
+  transition: all 300ms;
+}
+
+.button:hover {
+  background-color: var(--medium-blue);
+  color: var(--navy);
 }

@@ -8,9 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'deep-blue': '#0A0F5E',
-        'vibrant-purple': '#4B0082',
-        'electric-teal': '#00D4C0',
+        'light-gray': '#eff5fa',
+        'navy': '#141c33',
+        'blue-gray': '#2f456f',
+        'medium-blue': '#5374ac',
+        'mint': '#8afdd0',
+      },
+      fontFamily: {
+        'norwester': ['var(--font-norwester)', 'sans-serif'],
       },
       spacing: {
         '128': '32rem',
@@ -22,6 +27,13 @@ module.exports = {
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'blink': 'blink 1s step-end infinite',
+      },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        }
       },
     },
   },
@@ -36,5 +48,6 @@ module.exports = {
     'border-deep-blue',
     'border-vibrant-purple',
     'border-electric-teal',
+    'font-norwester',
   ],
 }
