@@ -48,19 +48,19 @@ export default function Contact() {
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📍
                     </span>
-                    <span>123 Tech Street, Silicon Valley, CA</span>
+                    <span>Tech Lumina, Colombo, SriLanka</span>
                   </p>
                   <p className="flex items-center space-x-3 text-blue-gray">
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📧
                     </span>
-                    <span>contact@techlumina.com</span>
+                    <span>techlumina25@gmail.com</span>
                   </p>
                   <p className="flex items-center space-x-3 text-blue-gray">
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📱
                     </span>
-                    <span>+1 (555) 123-4567</span>
+                    <span>+94 (078) 869-286</span>
                   </p>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 px-4 bg-navy">
+      {/* <section className="py-20 px-4 bg-navy">
         <div className="max-w-7xl mx-auto">
           <div className="h-[400px] rounded-xl overflow-hidden relative bg-medium-blue/10">
             <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy"></div>
@@ -160,7 +160,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

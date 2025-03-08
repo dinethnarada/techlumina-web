@@ -20,9 +20,10 @@ const Navbar = () => {
             <Link href="/about" className={`nav-link ${pathname === '/about' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
               About
             </Link>
-            <Link href="/projects" className={`nav-link ${pathname === '/projects' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
+            
+            {/* <Link href="/projects" className={`nav-link ${pathname === '/projects' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
               Projects
-            </Link>
+            </Link> */}
             <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
               Contact
             </Link>
