@@ -45,7 +45,7 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section className="py-20 px-6 sm:px-8 md:px-12 bg-navy">
         <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center text-light-gray">Why Choose Us</h2>
+          <h2 className="section-title text-center text-light-gray !text-light-gray">Why Choose Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">

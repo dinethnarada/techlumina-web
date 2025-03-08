@@ -87,21 +87,21 @@ export default function Projects() {
       {/* Technologies Section */}
       <section className="py-20 px-4 bg-navy">
         <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center text-light-gray">Technologies We Use</h2>
+          <h2 className="section-title text-center text-light-gray !text-light-gray">Technologies We Use</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="card text-center">
+            <div className="bg-medium-blue/10 p-6 rounded-lg text-center backdrop-blur-sm border border-medium-blue/20">
               <h3 className="text-xl font-semibold mb-2 text-light-gray">Frontend</h3>
               <p className="text-light-gray/80">React, Vue, Angular, Next.js</p>
             </div>
-            <div className="card text-center">
+            <div className="bg-medium-blue/10 p-6 rounded-lg text-center backdrop-blur-sm border border-medium-blue/20">
               <h3 className="text-xl font-semibold mb-2 text-light-gray">Backend</h3>
               <p className="text-light-gray/80">Node.js, Python, Java, Go</p>
             </div>
-            <div className="card text-center">
+            <div className="bg-medium-blue/10 p-6 rounded-lg text-center backdrop-blur-sm border border-medium-blue/20">
               <h3 className="text-xl font-semibold mb-2 text-light-gray">Database</h3>
               <p className="text-light-gray/80">MongoDB, PostgreSQL, Redis</p>
             </div>
-            <div className="card text-center">
+            <div className="bg-medium-blue/10 p-6 rounded-lg text-center backdrop-blur-sm border border-medium-blue/20">
               <h3 className="text-xl font-semibold mb-2 text-light-gray">Cloud</h3>
               <p className="text-light-gray/80">AWS, GCP, Azure, Vercel</p>
             </div>

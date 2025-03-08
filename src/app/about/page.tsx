@@ -54,7 +54,7 @@ export default function About() {
       {/* Team Section */}
       <section className="py-20 px-6 sm:px-8 md:px-12 bg-navy">
         <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center text-light-gray">Our Approach</h2>
+          <h2 className="section-title text-center text-light-gray !text-light-gray">Our Approach</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="card">
               <h3 className="text-2xl font-semibold mb-4 text-navy">Discovery & Planning</h3>
