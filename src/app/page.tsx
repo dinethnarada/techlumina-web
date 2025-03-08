@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import TypewriterText from '@/components/TypewriterText';
 
 export default function Home() {
   return (
@@ -12,10 +14,14 @@ export default function Home() {
             <br />
             <span className="text-light-gray">Web Solutions</span>
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 text-light-gray font-norwester tracking-wide">
-            Crafting Tomorrow&apos;s Websites, Today
+          <p className="text-2xl md:text-3xl mb-8 font-norwester tracking-wide">
+            <TypewriterText 
+              text="Crafting Tomorrow's Websites, Today"
+              className="text-light-gray/80"
+              delay={100}
+            />
           </p>
-          <a href="/contact" className="button">
+          <a href="/contact" className="button mt-8 inline-block">
             Get Started
           </a>
         </div>
