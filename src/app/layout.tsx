@@ -2,8 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { norwester } from './fonts';
+import { norwester, eightgon } from './fonts';
 import PageTransition from '@/components/PageTransition';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: 'Tech Lumina',
@@ -16,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={norwester.variable}>
-      <body className="font-norwester antialiased">
+    <html lang="en" className={`${eightgon.variable}`}>
+      <body className="font-eightgon antialiased bg-navy text-light-gray">
         <Navbar />
         <main className="min-h-screen pt-16">
           <PageTransition>
@@ -25,6 +26,7 @@ export default function RootLayout({
           </PageTransition>
         </main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
