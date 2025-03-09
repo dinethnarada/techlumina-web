@@ -1,6 +1,9 @@
+'use client';
+
 import ValueCard from '@/components/ValueCard';
 import ApproachCard from '@/components/ApproachCard';
 import Button from '@/components/Button';
+import GlassImage from '@/components/GlassImage';
 import { FaLightbulb, FaStar, FaHandshake, FaSearch, FaPencilRuler, FaCheckCircle, FaTools } from 'react-icons/fa';
 
 export default function About() {
@@ -19,11 +22,12 @@ export default function About() {
                 With a team of experienced developers and designers, we specialize in delivering custom web solutions that help businesses thrive in the digital age.
               </p>
             </div>
-            <div className="relative h-[300px] rounded-xl overflow-hidden bg-medium-blue/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-48 h-48 rounded-full bg-medium-blue/20 animate-pulse"></div>
-              </div>
+            <div className="h-[300px]">
+              <GlassImage
+                src="/images/about-tech-lumina.jpg"
+                alt="Tech Lumina's innovative workspace"
+                priority
+              />
             </div>
           </div>
         </div>

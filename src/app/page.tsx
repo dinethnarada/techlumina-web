@@ -5,6 +5,7 @@ import LogoText from '@/components/LogoText';
 import MatrixRain from '@/components/MatrixRain';
 import ServiceCard from '@/components/ServiceCard';
 import Button from '@/components/Button';
+import GlassImage from '@/components/GlassImage';
 import { FaCode, FaPencilRuler, FaChartLine, FaUserCog, FaLaptopCode, FaHeadset } from 'react-icons/fa';
 
 export default function Home() {
@@ -99,11 +100,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-xl overflow-hidden bg-medium-blue/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 rounded-full bg-medium-blue/20 animate-pulse"></div>
-              </div>
+            <div className="h-[400px]">
+              <GlassImage
+                src="/images/modern-workspace.jpg"
+                alt="Modern workspace with developers collaborating"
+                priority
+              />
             </div>
           </div>
         </div>
