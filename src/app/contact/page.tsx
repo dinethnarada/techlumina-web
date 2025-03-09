@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Button from '@/components/Button';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -39,9 +40,9 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Contact Hero Section */}
-      <section className="relative py-20 px-6 sm:px-8 md:px-12 bg-navy">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="section-title text-center text-light-gray !text-light-gray">Get in Touch</h1>
+      <section className="relative py-24 px-4 md:px-8 bg-navy">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Get in Touch</h1>
           <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
             Ready to start your next project? Contact us today and let's discuss how we can help bring your vision to life.
           </p>
@@ -49,7 +50,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 px-6 sm:px-8 md:px-12 bg-light-gray">
+      <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-8">
@@ -150,13 +151,14 @@ export default function Contact() {
                   placeholder="Tell us about your project"
                 />
               </div>
-
-              <button
+              
+              <Button 
+                variant="light" 
                 type="submit"
-                className="button w-full justify-center"
+                className="w-full"
               >
                 Send Message
-              </button>
+              </Button>
             </form>
           </div>
         </div>
