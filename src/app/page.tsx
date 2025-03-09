@@ -1,4 +1,6 @@
 'use client';
+
+
 import Image from 'next/image';
 import TypewriterText from '@/components/TypewriterText';
 import LogoText from '@/components/LogoText';
@@ -8,17 +10,50 @@ import Button from '@/components/Button';
 import GlassImage from '@/components/GlassImage';
 import { FaCode, FaPencilRuler, FaChartLine, FaUserCog, FaLaptopCode, FaHeadset } from 'react-icons/fa';
 
+// JSON-LD structured data for better SEO
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Tech Lumina',
+  description: "Tech Lumina is a cutting-edge web development agency specializing in creating powerful, scalable, and innovative web applications. We're dedicated to Crafting Tomorrow's Websites, Today.",
+  url: 'https://techlumina.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    'target': 'https://techlumina.com/search?q={search_term_string}',
+    'query-input': 'required name=search_term_string'
+  },
+  provider: {
+    '@type': 'Organization',
+    name: 'Tech Lumina',
+    description: 'A modern web development agency specializing in cutting-edge web solutions.',
+    image: '/images/modern-workspace.jpg',
+    url: 'https://techlumina.com',
+    sameAs: [
+      'https://twitter.com/techlumina',
+      'https://linkedin.com/company/techlumina',
+      'https://github.com/techlumina'
+    ],
+    areaServed: 'Worldwide',
+    serviceType: ['Web Development', 'UI/UX Design', 'Digital Strategy']
+  }
+};
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-navy">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    <main className="min-h-screen bg-navy" itemScope itemType="https://schema.org/WebPage">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <MatrixRain />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-6xl md:text-7xl font-bold mb-4 font-norwester text-light-gray">
+          <h1 className="text-6xl md:text-7xl font-bold mb-4 font-norwester text-light-gray" itemProp="headline">
             <LogoText />
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 font-norwester tracking-wide text-light-gray/80">
+          <p className="text-2xl md:text-3xl mb-8 font-norwester tracking-wide text-light-gray/80" itemProp="description">
             <TypewriterText 
               text="Crafting Tomorrow's Websites, Today"
               delay={100}
@@ -34,7 +69,7 @@ export default function Home() {
       <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-navy">Our Services</h2>
+            <h2 className="text-4xl font-bold mb-4 text-navy" itemProp="name">Our Services</h2>
             <p className="text-xl text-blue-gray max-w-2xl mx-auto">
               Transforming ideas into digital excellence with cutting-edge solutions
             </p>
@@ -65,7 +100,7 @@ export default function Home() {
       <section className="py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-light-gray">Why Choose Us</h2>
+            <h2 className="text-4xl font-bold mb-4 text-light-gray" itemProp="name">Why Choose Us</h2>
             <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
               We combine expertise, innovation, and dedication to deliver exceptional results
             </p>
@@ -122,5 +157,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }

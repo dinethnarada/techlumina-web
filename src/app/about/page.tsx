@@ -1,21 +1,51 @@
-'use client';
-
 import ValueCard from '@/components/ValueCard';
 import ApproachCard from '@/components/ApproachCard';
 import Button from '@/components/Button';
 import GlassImage from '@/components/GlassImage';
 import { FaLightbulb, FaStar, FaHandshake, FaSearch, FaPencilRuler, FaCheckCircle, FaTools } from 'react-icons/fa';
 
+// JSON-LD structured data for better SEO
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Tech Lumina',
+  description: 'A forward-thinking web development company dedicated to creating powerful, scalable, and innovative web applications.',
+  image: '/images/about-tech-lumina.jpg',
+  url: 'https://techlumina.com/about',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'US'
+  },
+  sameAs: [
+    'https://twitter.com/techlumina',
+    'https://linkedin.com/company/techlumina',
+    'https://github.com/techlumina'
+  ],
+  knowsAbout: [
+    'Web Development',
+    'React Development',
+    'Next.js',
+    'UI/UX Design',
+    'Web Design',
+    'Digital Solutions'
+  ]
+};
+
 export default function About() {
   return (
-    <main className="min-h-screen bg-navy">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="min-h-screen bg-navy" itemScope itemType="https://schema.org/AboutPage">
       {/* About Hero Section */}
       <section className="relative py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">About Tech Lumina</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray" itemProp="headline">About Tech Lumina</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
             <div>
-              <p className="text-lg text-light-gray/80 mb-6">
+              <p className="text-lg text-light-gray/80 mb-6" itemProp="description">
                 Tech Lumina is a forward-thinking web development company dedicated to creating powerful, scalable, and innovative web applications. Our mission is to transform your digital ideas into reality through cutting-edge technology and exceptional design.
               </p>
               <p className="text-lg text-light-gray/80">
@@ -37,7 +67,7 @@ export default function About() {
       <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-navy">Our Values</h2>
+            <h2 className="text-4xl font-bold mb-4 text-navy" itemProp="name">Our Values</h2>
             <p className="text-xl text-blue-gray max-w-2xl mx-auto">
               Guided by principles that drive innovation and excellence
             </p>
@@ -68,7 +98,7 @@ export default function About() {
       <section className="py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-light-gray">Our Approach</h2>
+            <h2 className="text-4xl font-bold mb-4 text-light-gray" itemProp="name">Our Approach</h2>
             <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
               A systematic process that ensures success in every project
             </p>
@@ -113,5 +143,6 @@ export default function About() {
         </div>
       </section>
     </main>
+    </>
   );
 }

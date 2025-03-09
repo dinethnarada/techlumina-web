@@ -1,6 +1,24 @@
 import Image from 'next/image';
 import Button from '@/components/Button';
 
+// JSON-LD structured data for portfolio
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Tech Lumina Project Portfolio',
+  description: 'Showcase of successful web development projects by Tech Lumina across various industries.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Tech Lumina',
+    url: 'https://techlumina.com'
+  },
+  about: {
+    '@type': 'Thing',
+    name: 'Web Development Projects',
+    description: 'Collection of web development projects including e-commerce, healthcare, real estate, education, finance, and logistics solutions.'
+  }
+};
+
 export default function Projects() {
   const projects = [
     {
@@ -41,13 +59,40 @@ export default function Projects() {
     }
   ];
 
+  // Create structured data for projects
+  const projectsData = projects.map(project => ({
+    '@type': 'WebApplication',
+    name: project.title,
+    description: project.description,
+    applicationCategory: project.category,
+    operatingSystem: 'Web-based',
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock'
+    },
+    provider: {
+      '@type': 'Organization',
+      name: 'Tech Lumina'
+    }
+  }));
+
+  const portfolioJsonLd = {
+    ...jsonLd,
+    mainEntity: projectsData
+  };
+
   return (
-    <div className="min-h-screen">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioJsonLd) }}
+      />
+      <div className="min-h-screen" itemScope itemType="https://schema.org/CollectionPage">
       {/* Projects Hero Section */}
       <section className="relative py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Our Projects</h1>
-          <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray" itemProp="headline">Our Projects</h1>
+          <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto" itemProp="description">
             Explore our portfolio of successful projects where we've helped businesses transform their digital presence.
           </p>
         </div>
@@ -58,7 +103,13 @@ export default function Projects() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="card group hover:transform hover:scale-105 transition-all duration-300">
+              <div 
+                key={index} 
+                className="card group hover:transform hover:scale-105 transition-all duration-300"
+                itemScope
+                itemType="https://schema.org/WebApplication"
+                itemProp="hasPart"
+              >
                 <div className="h-48 relative mb-6 rounded-lg overflow-hidden bg-navy">
                   <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy group-hover:opacity-50 transition-opacity"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -67,8 +118,8 @@ export default function Projects() {
                     </span>
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-navy">{project.title}</h3>
-                <p className="text-blue-gray mb-4">{project.description}</p>
+                <h3 className="text-2xl font-semibold mb-3 text-navy" itemProp="name">{project.title}</h3>
+                <p className="text-blue-gray mb-4" itemProp="description">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, techIndex) => (
                     <span
@@ -122,6 +173,7 @@ export default function Projects() {
           </Button>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
