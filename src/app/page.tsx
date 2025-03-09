@@ -2,25 +2,25 @@
 import Image from 'next/image';
 import TypewriterText from '@/components/TypewriterText';
 import LogoText from '@/components/LogoText';
+import MatrixRain from '@/components/MatrixRain';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-navy px-6 sm:px-8 md:px-12">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy"></div>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <MatrixRain />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-6xl md:text-7xl font-bold mb-4 font-norwester">
+          <h1 className="text-6xl md:text-7xl font-bold mb-4 font-norwester text-light-gray">
             <LogoText />
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 font-norwester tracking-wide">
+          <p className="text-2xl md:text-3xl mb-8 font-norwester tracking-wide text-light-gray/80">
             <TypewriterText 
               text="Crafting Tomorrow's Websites, Today"
-              className="text-light-gray/80"
               delay={100}
             />
           </p>
-          <a href="/contact" className="button mt-8 inline-block">
+          <a href="/contact" className="button mt-8 inline-block hover:bg-medium-blue/80 transition-colors">
             Get Started
           </a>
         </div>
