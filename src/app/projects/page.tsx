@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Button from '@/components/Button';
 
 export default function Projects() {
   const projects = [
@@ -43,9 +44,9 @@ export default function Projects() {
   return (
     <div className="min-h-screen">
       {/* Projects Hero Section */}
-      <section className="relative py-20 px-6 sm:px-8 md:px-12 bg-navy">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="section-title text-center text-light-gray !text-light-gray">Our Projects</h1>
+      <section className="relative py-24 px-4 md:px-8 bg-navy">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Our Projects</h1>
           <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
             Explore our portfolio of successful projects where we've helped businesses transform their digital presence.
           </p>
@@ -53,8 +54,8 @@ export default function Projects() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 px-6 sm:px-8 md:px-12 bg-light-gray">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-4 md:px-8 bg-light-gray">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="card group hover:transform hover:scale-105 transition-all duration-300">
@@ -85,9 +86,9 @@ export default function Projects() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 px-4 bg-navy">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center text-light-gray !text-light-gray">Technologies We Use</h2>
+      <section className="py-24 px-4 md:px-8 bg-navy">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-center text-light-gray">Technologies We Use</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="bg-medium-blue/10 p-6 rounded-lg text-center backdrop-blur-sm border border-medium-blue/20">
               <h3 className="text-xl font-semibold mb-2 text-light-gray">Frontend</h3>
@@ -110,15 +111,15 @@ export default function Projects() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 sm:px-8 md:px-12 bg-light-gray">
+      <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="section-title">Have a Project in Mind?</h2>
+          <h2 className="text-4xl font-bold mb-4 text-navy">Have a Project in Mind?</h2>
           <p className="text-xl text-blue-gray mb-8">
             Let's discuss how we can help you achieve your digital goals.
           </p>
-          <a href="/contact" className="button">
+          <Button variant="light" href="/contact">
             Start a Project
-          </a>
+          </Button>
         </div>
       </section>
     </div>

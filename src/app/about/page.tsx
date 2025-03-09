@@ -1,5 +1,6 @@
 import ValueCard from '@/components/ValueCard';
 import ApproachCard from '@/components/ApproachCard';
+import Button from '@/components/Button';
 import { FaLightbulb, FaStar, FaHandshake, FaSearch, FaPencilRuler, FaCheckCircle, FaTools } from 'react-icons/fa';
 
 export default function About() {
@@ -102,9 +103,9 @@ export default function About() {
           <p className="text-xl text-blue-gray mb-8">
             Let's discuss how we can help bring your vision to life.
           </p>
-          <a href="/contact" className="bg-medium-blue/20 hover:bg-medium-blue/30 text-navy border border-medium-blue/20 backdrop-blur-sm px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
+          <Button variant="light" href="/contact">
             Get in Touch
-          </a>
+          </Button>
         </div>
       </section>
     </main>

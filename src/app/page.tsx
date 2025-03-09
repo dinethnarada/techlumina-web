@@ -4,7 +4,8 @@ import TypewriterText from '@/components/TypewriterText';
 import LogoText from '@/components/LogoText';
 import MatrixRain from '@/components/MatrixRain';
 import ServiceCard from '@/components/ServiceCard';
-import { FaCode, FaMobileAlt, FaPalette, FaRocket } from 'react-icons/fa';
+import Button from '@/components/Button';
+import { FaCode, FaPencilRuler, FaChartLine, FaUserCog, FaLaptopCode, FaHeadset } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -22,9 +23,9 @@ export default function Home() {
               delay={100}
             />
           </p>
-          <a href="/contact" className="bg-medium-blue/20 hover:bg-medium-blue/30 text-light-gray border border-medium-blue/20 backdrop-blur-sm px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
+          <Button variant="dark" href="/contact">
             Get Started
-          </a>
+          </Button>
         </div>
       </section>
 
@@ -45,12 +46,12 @@ export default function Home() {
                 description="Custom web solutions using cutting-edge technologies and modern frameworks."
               />
               <ServiceCard
-                icon={<FaPalette className="w-full h-full" />}
+                icon={<FaPencilRuler className="w-full h-full" />}
                 title="UI/UX Design"
                 description="User-centered design solutions that create engaging digital experiences."
               />
               <ServiceCard
-                icon={<FaRocket className="w-full h-full" />}
+                icon={<FaChartLine className="w-full h-full" />}
                 title="Digital Strategy"
                 description="Strategic planning and consulting for your digital transformation journey."
               />
@@ -60,14 +61,19 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 px-6 sm:px-8 md:px-12 bg-navy">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center text-light-gray !text-light-gray">Why Choose Us</h2>
+      <section className="py-24 px-4 md:px-8 bg-navy">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-light-gray">Why Choose Us</h2>
+            <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
+              We combine expertise, innovation, and dedication to deliver exceptional results
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full bg-medium-blue/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-navy text-xl">✓</span>
+                  <FaUserCog className="w-6 h-6 text-light-gray" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-light-gray">Expert Team</h3>
@@ -76,7 +82,7 @@ export default function Home() {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full bg-medium-blue/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-navy text-xl">✓</span>
+                  <FaLaptopCode className="w-6 h-6 text-light-gray" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-light-gray">Cutting-edge Tech</h3>
@@ -85,7 +91,7 @@ export default function Home() {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full bg-medium-blue/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-navy text-xl">✓</span>
+                  <FaHeadset className="w-6 h-6 text-light-gray" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-light-gray">Dedicated Support</h3>
@@ -93,8 +99,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-xl overflow-hidden">
-              <div className="absolute inset-0 tech-gradient opacity-30"></div>
+            <div className="relative h-[400px] rounded-xl overflow-hidden bg-medium-blue/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-64 h-64 rounded-full bg-medium-blue/20 animate-pulse"></div>
               </div>
@@ -104,13 +110,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 sm:px-8 md:px-12 bg-light-gray">
+      <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="section-title">Ready to Transform Your Ideas?</h2>
+          <h2 className="text-4xl font-bold mb-4 text-navy">Ready to Transform Your Ideas?</h2>
           <p className="text-xl text-blue-gray mb-8">Let's build something amazing together.</p>
-          <a href="/contact" className="bg-medium-blue/20 hover:bg-medium-blue/30 text-light-gray border border-medium-blue/20 backdrop-blur-sm px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
+          <Button variant="light" href="/contact">
             Contact Us
-          </a>
+          </Button>
         </div>
       </section>
     </main>
