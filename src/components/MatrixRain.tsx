@@ -1,8 +1,11 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 const MatrixRain = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -13,7 +16,8 @@ const MatrixRain = () => {
 
     let animationFrameId: number;
     let lastTime = 0;
-    const fps = 30; // Limit FPS for better performance
+    const fps = isMobile ? 10 : 30; // Lower FPS on mobile
+    const density = isMobile ? 0.2 : 1; // Reduce density on mobile
     const fpsInterval = 1000 / fps;
 
     // Set canvas size to match container size
@@ -95,15 +99,17 @@ const MatrixRain = () => {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ backgroundColor: '#141c33' }}
-      />
+      {isVisible && (
+        <canvas
+          ref={canvasRef}
+          className="w-full h-full"
+          style={{ backgroundColor: '#141c33' }}
+        />
+      )}
     </div>
   );
 };
