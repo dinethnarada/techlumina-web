@@ -8,9 +8,42 @@ import Button from '@/components/Button';
 import GlassImage from '@/components/GlassImage';
 import { FaCode, FaPencilRuler, FaChartLine, FaUserCog, FaLaptopCode, FaHeadset } from 'react-icons/fa';
 
+// JSON-LD structured data for better SEO
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Tech Lumina',
+  description: "Crafting Tomorrow's Websites, Today",
+  url: 'https://techlumina.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    'target': 'https://techlumina.com/search?q={search_term_string}',
+    'query-input': 'required name=search_term_string'
+  },
+  provider: {
+    '@type': 'Organization',
+    name: 'Tech Lumina',
+    description: 'A modern web development agency specializing in cutting-edge web solutions.',
+    image: '/images/modern-workspace.jpg',
+    url: 'https://techlumina.com',
+    sameAs: [
+      'https://twitter.com/techlumina',
+      'https://linkedin.com/company/techlumina',
+      'https://github.com/techlumina'
+    ],
+    areaServed: 'Worldwide',
+    serviceType: ['Web Development', 'UI/UX Design', 'Digital Strategy']
+  }
+};
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-navy">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    <main className="min-h-screen bg-navy" itemScope itemType="https://schema.org/WebPage">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <MatrixRain />
@@ -122,5 +155,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }
