@@ -67,6 +67,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${eightgon.variable}`}>
+      <head>
+      <meta name="google-site-verification" content="uLtKm0rtFybjBOrF31A5JCP2jnVwVBX8UsjxY7ZcBm4" />
+      </head>
       <body className="font-eightgon antialiased bg-navy text-light-gray">
         <Navbar />
         <main className="min-h-screen pt-16">
