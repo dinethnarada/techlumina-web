@@ -12,16 +12,17 @@ const MatrixRain = () => {
     if (!ctx) return;
 
     let animationFrameId: number;
+    let lastTime = 0;
+    const fps = 30; // Limit FPS for better performance
+    const fpsInterval = 1000 / fps;
 
     // Set canvas size to match container size
     const resize = () => {
       const container = canvas.parentElement;
       if (!container) return;
       
-      const scale = window.devicePixelRatio || 1;
-      canvas.width = container.clientWidth * scale;
-      canvas.height = container.clientHeight * scale;
-      ctx.scale(scale, scale);
+      canvas.width = container.clientWidth;
+      canvas.height = container.clientHeight;
       
       canvas.style.width = `${container.clientWidth}px`;
       canvas.style.height = `${container.clientHeight}px`;
@@ -35,30 +36,42 @@ const MatrixRain = () => {
     const fontSize = 16;
     let columns = Math.floor(canvas.width / fontSize);
     let drops = Array(columns).fill(0);
+    let positions = Array(columns).fill(0);
+    
+    const speed = 0.5; // Controls rain drop speed
     
     // Animation loop
-    const draw = () => {
+    const draw = (currentTime: number) => {
+      // Throttle FPS
+      const elapsed = currentTime - lastTime;
+      if (elapsed < fpsInterval) {
+        animationFrameId = requestAnimationFrame(draw);
+        return;
+      }
+      lastTime = currentTime - (elapsed % fpsInterval);
+
       // Semi-transparent fade effect
-      ctx.fillStyle = 'rgba(20, 28, 51, 0.1)'; // Using Tech Lumina's navy (#141c33)
+      ctx.fillStyle = 'rgba(20, 28, 51, 0.12)'; // Tech Lumina's navy
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Draw characters
-      drops.forEach((y, i) => {
-        // Random character
+      ctx.font = `${fontSize}px monospace`; // Set font once
+      drops.forEach((_, i) => {
         const char = chars[Math.floor(Math.random() * chars.length)];
         const x = i * fontSize;
         
-        // Vary the opacity for a more dynamic effect
-        const opacity = Math.random() * 0.5 + 0.5;
-        ctx.fillStyle = `rgba(239, 245, 250, ${opacity})`; // Tech Lumina's light gray (#eff5fa)
-        ctx.font = `${fontSize}px monospace`;
-        ctx.fillText(char, x, y * fontSize);
+        // Draw character with varying opacity
+        const opacity = Math.random() * 0.3 + 0.7;
+        ctx.fillStyle = `rgba(239, 245, 250, ${opacity})`; // Tech Lumina's light gray
+        ctx.fillText(char, x, Math.floor(positions[i]) * fontSize);
 
         // Reset drop
-        if (y * fontSize > canvas.height && Math.random() > 0.975) {
+        if (positions[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
+          positions[i] = 0;
         } else {
-          drops[i]++;
+          positions[i] += speed;
+          drops[i] = Math.floor(positions[i]);
         }
       });
 
@@ -68,13 +81,13 @@ const MatrixRain = () => {
     // Handle resize
     const handleResize = () => {
       resize();
-      // Recalculate columns and drops
       columns = Math.floor(canvas.width / fontSize);
       drops = Array(columns).fill(0);
+      positions = Array(columns).fill(0);
     };
 
     window.addEventListener('resize', handleResize);
-    draw();
+    animationFrameId = requestAnimationFrame(draw);
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -89,7 +102,7 @@ const MatrixRain = () => {
       <canvas
         ref={canvasRef}
         className="w-full h-full"
-        style={{ backgroundColor: '#141c33' }} // Tech Lumina's navy color
+        style={{ backgroundColor: '#141c33' }}
       />
     </div>
   );

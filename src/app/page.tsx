@@ -3,10 +3,12 @@ import Image from 'next/image';
 import TypewriterText from '@/components/TypewriterText';
 import LogoText from '@/components/LogoText';
 import MatrixRain from '@/components/MatrixRain';
+import ServiceCard from '@/components/ServiceCard';
+import { FaCode, FaMobileAlt, FaPalette, FaRocket } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen bg-navy">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <MatrixRain />
@@ -20,28 +22,38 @@ export default function Home() {
               delay={100}
             />
           </p>
-          <a href="/contact" className="button mt-8 inline-block hover:bg-medium-blue/80 transition-colors">
+          <a href="/contact" className="bg-medium-blue/20 hover:bg-medium-blue/30 text-light-gray border border-medium-blue/20 backdrop-blur-sm px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
             Get Started
           </a>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6 sm:px-8 md:px-12 bg-light-gray">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-4 text-navy">Custom Web Apps</h3>
-              <p className="text-blue-gray">Tailored solutions that perfectly match your business requirements and goals.</p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-4 text-navy">Modern UI/UX</h3>
-              <p className="text-blue-gray">Beautiful, intuitive interfaces that provide exceptional user experiences.</p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-4 text-navy">Scalable Solutions</h3>
-              <p className="text-blue-gray">Future-proof applications that grow with your business needs.</p>
+      <section className="py-24 px-4 md:px-8 bg-light-gray">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-navy">Our Services</h2>
+            <p className="text-xl text-blue-gray max-w-2xl mx-auto">
+              Transforming ideas into digital excellence with cutting-edge solutions
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              <ServiceCard
+                icon={<FaCode className="w-full h-full" />}
+                title="Web Development"
+                description="Custom web solutions using cutting-edge technologies and modern frameworks."
+              />
+              <ServiceCard
+                icon={<FaPalette className="w-full h-full" />}
+                title="UI/UX Design"
+                description="User-centered design solutions that create engaging digital experiences."
+              />
+              <ServiceCard
+                icon={<FaRocket className="w-full h-full" />}
+                title="Digital Strategy"
+                description="Strategic planning and consulting for your digital transformation journey."
+              />
             </div>
           </div>
         </div>
@@ -96,11 +108,11 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="section-title">Ready to Transform Your Ideas?</h2>
           <p className="text-xl text-blue-gray mb-8">Let's build something amazing together.</p>
-          <a href="/contact" className="button">
+          <a href="/contact" className="bg-medium-blue/20 hover:bg-medium-blue/30 text-light-gray border border-medium-blue/20 backdrop-blur-sm px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
             Contact Us
           </a>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
