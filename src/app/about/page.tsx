@@ -27,6 +27,8 @@ export default function About() {
                 src="/images/about-tech-lumina.jpg"
                 alt="Tech Lumina's innovative workspace"
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                quality={90}
               />
             </div>
           </div>
