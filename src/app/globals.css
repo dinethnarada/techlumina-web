@@ -7,7 +7,6 @@
   --navy: #141c33;
   --blue-gray: #2f456f;
   --medium-blue: #5374ac;
-
 }
 
 body {
@@ -48,6 +47,20 @@ section {
 }
 
 .nav-link:hover {
+  background-color: rgba(83, 116, 172, 0.1);
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 300ms;
+  color: var(--light-gray);
+  width: 100%;
+  text-align: left;
+}
+
+.mobile-nav-link:hover {
   background-color: rgba(83, 116, 172, 0.1);
 }
 
