@@ -16,8 +16,8 @@ const MatrixRain = () => {
 
     let animationFrameId: number;
     let lastTime = 0;
-    const fps = isMobile ? 20 : 30; // Lower FPS on mobile
-    const density = isMobile ? 0.5 : 1; // Reduce density on mobile
+    const fps = isMobile ? 10 : 30; // Lower FPS on mobile
+    const density = isMobile ? 0.2 : 1; // Reduce density on mobile
     const fpsInterval = 1000 / fps;
 
     // Set canvas size to match container size
@@ -99,15 +99,17 @@ const MatrixRain = () => {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ backgroundColor: '#141c33' }}
-      />
+      {isVisible && (
+        <canvas
+          ref={canvasRef}
+          className="w-full h-full"
+          style={{ backgroundColor: '#141c33' }}
+        />
+      )}
     </div>
   );
 };
