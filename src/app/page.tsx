@@ -23,7 +23,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Tech Lumina',
-    description: 'A modern web development agency specializing in cutting-edge web solutions.',
+    description: 'Your trusted partner for innovative digital solutions and technology services.',
     image: '/images/modern-workspace.jpg',
     url: 'https://techlumina.com',
     sameAs: [
@@ -32,7 +32,7 @@ const jsonLd = {
       'https://github.com/techlumina'
     ],
     areaServed: 'Worldwide',
-    serviceType: ['Web Development', 'UI/UX Design', 'Digital Strategy']
+    serviceType: ['Digital Solutions', 'Technology Services', 'Tech Consulting', 'Education Consultancy']
   }
 };
 
@@ -67,9 +67,9 @@ export default function Home() {
       <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-navy">Our Services</h2>
+            <h2 className="text-4xl font-bold mb-4 text-navy">Digital Solutions & Tech Services</h2>
             <p className="text-xl text-blue-gray max-w-2xl mx-auto">
-              Transforming ideas into digital excellence with cutting-edge solutions
+              Transforming businesses with innovative technology solutions and digital excellence
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
@@ -98,9 +98,9 @@ export default function Home() {
       <section className="py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-light-gray">Why Choose Us</h2>
+            <h2 className="text-4xl font-bold mb-4 text-light-gray">Tech Lumina Solutions</h2>
             <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
-              We combine expertise, innovation, and dedication to deliver exceptional results
+              We combine technical expertise with innovative digital solutions to deliver exceptional results
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -147,8 +147,8 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-navy">Ready to Transform Your Ideas?</h2>
-          <p className="text-xl text-blue-gray mb-8">Let's build something amazing together.</p>
+          <h2 className="text-4xl font-bold mb-4 text-navy">Contact Tech Lumina Today</h2>
+          <p className="text-xl text-blue-gray mb-8">Let's create innovative digital solutions together.</p>
           <Button variant="light" href="/contact">
             Contact Us
           </Button>

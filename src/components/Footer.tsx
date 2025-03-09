@@ -30,6 +30,8 @@ const Footer = () => {
               <li>UI/UX Design</li>
               <li>Mobile Apps</li>
               <li>Cloud Solutions</li>
+              <li>Education Consultancy</li>
+              <li>Internship Guidance</li>
             </ul>
           </div>
           
@@ -44,8 +46,27 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-medium-blue/20 text-center text-light-gray/60">
-          <p>&copy; {new Date().getFullYear()} Tech Lumina. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-medium-blue/20 flex flex-col items-center gap-2">
+          <p className="text-light-gray/80 text-center">Looking for internship opportunities? Visit our education consultancy services to kickstart your career journey.</p>
+          <div className="flex gap-6">
+            <Link
+              href="https://www.linkedin.com/company/pathwayprep25"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-light-gray hover:text-medium-blue transition-colors"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              href="https://www.facebook.com/share/19o2F4nLGW/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-light-gray hover:text-medium-blue transition-colors"
+            >
+              Facebook
+            </Link>
+          </div>
+          <p className="text-light-gray/60">&copy; {new Date().getFullYear()} Tech Lumina. All rights reserved.</p>
         </div>
       </div>
     </footer>

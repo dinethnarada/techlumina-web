@@ -8,10 +8,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
-  title: 'Tech Lumina',
-  description: "Crafting Tomorrow's Websites, Today",
+  title: `Tech Lumina | Crafting Tomorrow's Websites, Today`,
+  description: "Tech Lumina delivers comprehensive digital solutions and innovative tech services. Contact us to transform your business with cutting-edge technology solutions.",
   metadataBase: new URL('https://techlumina.com'),
-  keywords: ['web development', 'modern websites', 'react development', 'next.js agency', 'web design', 'UI/UX design', 'digital solutions', 'tech agency'],
+  keywords: ['tech lumina', 'digital solutions', 'technology services', 'tech solutions', 'digital technology', 'tech services', 'contact tech lumina', 'innovative solutions'],
   authors: [{ name: 'Tech Lumina Team' }],
   creator: 'Tech Lumina',
   publisher: 'Tech Lumina',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://techlumina.com',
-    title: 'Tech Lumina | Modern Web Development Agency',
-    description: "Tech Lumina is a cutting-edge web development agency specializing in modern, performant, and beautiful websites. We craft tomorrow's digital experiences using the latest technologies and best practices.",
+    title: 'Tech Lumina | Digital Solutions & Technology Services',
+    description: "Tech Lumina delivers comprehensive digital solutions and innovative tech services. Contact us to transform your business with cutting-edge technology solutions.",
     siteName: 'Tech Lumina',
     images: [{
       url: '/og-image.jpg',
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tech Lumina | Modern Web Development Agency',
-    description: "Tech Lumina is a cutting-edge web development agency specializing in modern, performant, and beautiful websites.",
+    title: 'Tech Lumina | Digital Solutions & Technology Services',
+    description: "Tech Lumina - Your partner for innovative digital solutions and technology services. Contact us for transformative tech solutions.",
     images: ['/og-image.jpg'],
     creator: '@techlumina',
   },
