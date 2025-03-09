@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '@/components/Button';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ export default function Contact() {
     company: '',
     message: '',
   });
+  const [showNotification, setShowNotification] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,9 +29,12 @@ export default function Contact() {
       })
     })
 
-    // Reset form
+    // Reset form and show notification
     setFormData({ name: '', email: '', company: '', message: '' });
-    alert('Thank you for your message! We will get back to you soon.');
+    setShowNotification(true);
+    
+    // Hide notification after 5 seconds
+    setTimeout(() => setShowNotification(false), 5000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -38,7 +43,34 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Success Notification */}
+      <AnimatePresence>
+        {showNotification && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-navy/50 backdrop-blur-sm z-40"
+            />
+            {/* Notification */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-navy text-light-gray p-8 rounded-lg shadow-2xl flex flex-col items-center text-center max-w-sm w-full mx-4"
+            >
+              <div className="w-16 h-16 bg-medium-blue/20 rounded-full flex items-center justify-center mb-4">
+                <span className="text-4xl text-medium-blue">✓</span>
+              </div>
+              <h4 className="text-xl font-semibold mb-2">Message Sent!</h4>
+              <p className="text-light-gray/80">Thank you for reaching out. We'll get back to you soon.</p>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
       {/* Contact Hero Section */}
       <section className="relative py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
