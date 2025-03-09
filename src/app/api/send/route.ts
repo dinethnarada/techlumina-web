@@ -12,7 +12,7 @@ export async function POST(request:NextRequest) {
     const {name,email,company,message} = await request.json();
     try {
         const { data, error } = await resend.emails.send({
-            from: `TechLumina ${domain}`,
+            from: `TechLumina <contact@${domain}>`,
             to: [`${company_email}`],
             subject: 'TechLumina Contact Details',
             react: await EmailTemplate({ name, email, company, message }),
