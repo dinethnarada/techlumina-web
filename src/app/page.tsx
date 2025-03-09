@@ -138,6 +138,8 @@ export default function Home() {
                 src="/images/modern-workspace.jpg"
                 alt="Modern workspace with developers collaborating"
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                quality={90}
               />
             </div>
           </div>

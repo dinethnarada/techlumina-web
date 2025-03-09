@@ -9,13 +9,17 @@ interface GlassImageProps {
   alt: string;
   className?: string;
   priority?: boolean;
+  sizes?: string;
+  quality?: number;
 }
 
 const GlassImage: FC<GlassImageProps> = ({
   src,
   alt,
   className = '',
-  priority = false
+  priority = false,
+  sizes = '(max-width: 768px) 100vw, 50vw',
+  quality = 85
 }) => {
   return (
     <motion.div 
@@ -31,6 +35,9 @@ const GlassImage: FC<GlassImageProps> = ({
           fill
           className="object-cover object-center"
           priority={priority}
+          sizes={sizes}
+          quality={quality}
+          loading={priority ? 'eager' : 'lazy'}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-navy/40 via-transparent to-navy/40"></div>
       </div>
