@@ -18,7 +18,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-medium-blue transition-colors">Home</Link></li>
               <li><Link href="/about" className="hover:text-medium-blue transition-colors">About</Link></li>
-              <li><Link href="/projects" className="hover:text-medium-blue transition-colors">Projects</Link></li>
+              {/* <li><Link href="/projects" className="hover:text-medium-blue transition-colors">Projects</Link></li> */}
               <li><Link href="/contact" className="hover:text-medium-blue transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -36,10 +36,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">Contact</h3>
             <ul className="space-y-2 text-light-gray/80">
-              <li>123 Tech Street</li>
-              <li>Silicon Valley, CA</li>
-              <li>contact@techlumina.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>Tech Lumina</li>
+              <li>Silicon Valley, SriLanka</li>
+              <li>techlumina25@gmail.com</li>
+              <li>+94 (078) 869-286</li>
             </ul>
           </div>
         </div>

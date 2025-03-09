@@ -14,7 +14,19 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically handle form submission
-    console.log('Form submitted:', formData);
+    fetch('api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        message: formData.message
+      })
+    })
+
     // Reset form
     setFormData({ name: '', email: '', company: '', message: '' });
     alert('Thank you for your message! We will get back to you soon.');
@@ -49,23 +61,23 @@ export default function Contact() {
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📍
                     </span>
-                    <span>123 Tech Street, Silicon Valley, CA</span>
+                    <span>Tech Lumina, Colombo, SriLanka</span>
                   </p>
                   <p className="flex items-center space-x-3 text-blue-gray">
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📧
                     </span>
-                    <span>contact@techlumina.com</span>
+                    <span>techlumina25@gmail.com</span>
                   </p>
                   <p className="flex items-center space-x-3 text-blue-gray">
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📱
                     </span>
-                    <span>+1 (555) 123-4567</span>
+                    <span>+94 (078) 869-286</span>
                   </p>
                 </div>
               </div>
-              
+
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-navy">Office Hours</h2>
                 <div className="space-y-2 text-blue-gray">
@@ -92,7 +104,7 @@ export default function Contact() {
                   placeholder="Your name"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-blue-gray mb-2">
                   Email
@@ -108,7 +120,7 @@ export default function Contact() {
                   placeholder="your@email.com"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-blue-gray mb-2">
                   Company
@@ -123,7 +135,7 @@ export default function Contact() {
                   placeholder="Your company name"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-blue-gray mb-2">
                   Message
@@ -153,8 +165,8 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-24 px-4 md:px-8 bg-navy">
-        <div className="max-w-6xl mx-auto">
+      {/* <section className="py-20 px-4 bg-navy">
+        <div className="max-w-7xl mx-auto">
           <div className="h-[400px] rounded-xl overflow-hidden relative bg-medium-blue/10">
             <div className="absolute inset-0 bg-gradient-to-br from-navy via-medium-blue/20 to-navy"></div>
             <div className="absolute inset-0 flex items-center justify-center">
@@ -162,7 +174,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
