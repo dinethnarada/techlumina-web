@@ -27,7 +27,7 @@ const Navbar = () => {
             <Link href="/about" className={`nav-link ${pathname === '/about' ? 'bg-medium-blue/20 text-light-gray' : 'text-light-gray/80 hover:text-light-gray hover:bg-medium-blue/10'}`}>
               About
             </Link>
-            {/* <Link href="/projects" className={`nav-link ${pathname === '/projects' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
+            {/* <Link href="/projects" className={`hidden nav-link ${pathname === '/projects' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
               Projects
             </Link> */}
             <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'bg-medium-blue/20 text-light-gray' : ''}`}>
@@ -76,13 +76,13 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <Link
+              {/* <Link
                 href="/projects"
                 onClick={() => setIsMenuOpen(false)}
-                className={`mobile-nav-link ${pathname === '/projects' ? 'bg-medium-blue/20 text-light-gray' : 'text-light-gray/80 hover:text-light-gray hover:bg-medium-blue/10'}`}
+                className={`hidden mobile-nav-link ${pathname === '/projects' ? 'bg-medium-blue/20 text-light-gray' : 'text-light-gray/80 hover:text-light-gray hover:bg-medium-blue/10'}`}
               >
                 Projects
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
