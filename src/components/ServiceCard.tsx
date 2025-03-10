@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface ServiceCardProps {
@@ -10,38 +9,25 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ scale: 1.02, y: -5 }}
-      transition={{ duration: 0.3 }}
-      className="group relative bg-medium-blue/10 border border-medium-blue/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden"
+    <div
+      className="group relative bg-medium-blue/10 border border-medium-blue/20 backdrop-blur-sm p-6 rounded-lg h-full transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1 hover:bg-medium-blue/[0.08] overflow-hidden"
     >
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-medium-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
-      {/* Content */}
+      <div className="absolute inset-0 bg-gradient-to-br from-medium-blue/[0.005] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-lg" />
       <div className="relative z-10">
-        {/* Icon with hover effect */}
-        <div className="w-12 h-12 mb-4 text-medium-blue group-hover:text-blue-gray transition-colors duration-300">
+        <div className="w-12 h-12 mb-4 text-medium-blue transition-colors duration-300 ease-out group-hover:text-navy">
           {icon}
         </div>
-        
-        {/* Title */}
-        <h3 className="text-xl font-bold mb-3 text-navy">
+        <h3 className="text-xl font-bold mb-3 text-navy transition-colors duration-300 ease-out">
           {title}
         </h3>
-        
-        {/* Description */}
-        <p className="text-blue-gray">
+        <p className="text-blue-gray transition-colors duration-300 ease-out">
           {description}
         </p>
       </div>
 
-      {/* Glass effect overlay */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-[2px] pointer-events-none" />
-    </motion.div>
+
+
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface ApproachCardProps {
@@ -10,38 +9,24 @@ interface ApproachCardProps {
 
 const ApproachCard = ({ title, description, icon }: ApproachCardProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ scale: 1.02, y: -5 }}
-      transition={{ duration: 0.3 }}
-      className="group relative bg-medium-blue/10 border border-medium-blue/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden"
+    <div
+      className="group relative bg-medium-blue/10 border border-medium-blue/20 backdrop-blur-sm p-6 rounded-lg h-full transition-transform duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1 overflow-hidden"
     >
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-medium-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
-      {/* Content */}
+      <div className="absolute inset-0 bg-gradient-to-br from-medium-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-lg" />
       <div className="relative z-10">
-        {/* Icon with hover effect */}
-        <div className="w-12 h-12 mb-4 text-medium-blue group-hover:text-blue-gray transition-colors duration-300">
+        <div className="w-12 h-12 mb-4 text-medium-blue transition-colors duration-300 ease-out group-hover:text-light-gray">
           {icon}
         </div>
-        
-        {/* Title */}
-        <h3 className="text-xl font-bold mb-3 text-light-gray">
+        <h3 className="text-xl font-bold mb-3 text-light-gray transition-colors duration-300 ease-out">
           {title}
         </h3>
-        
-        {/* Description */}
-        <p className="text-light-gray/80">
+        <p className="text-light-gray/80 transition-colors duration-300 ease-out">
           {description}
         </p>
       </div>
+      <div className="absolute inset-0 bg-white/5 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-lg pointer-events-none" />
 
-      {/* Glass effect overlay */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-[2px] pointer-events-none" />
-    </motion.div>
+    </div>
   );
 };
 

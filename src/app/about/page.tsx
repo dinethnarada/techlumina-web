@@ -45,7 +45,7 @@ export default function About() {
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <ValueCard
                 icon={<FaLightbulb className="w-full h-full" />}
                 title="Innovation"
@@ -76,7 +76,7 @@ export default function About() {
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <ApproachCard
                 icon={<FaSearch className="w-full h-full" />}
                 title="Discovery & Planning"
