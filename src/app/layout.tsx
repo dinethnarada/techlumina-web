@@ -8,6 +8,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.ico'
+  },
   title: `Tech Lumina | Digital Solutions & Technology Services`,
   description: "Tech Lumina delivers comprehensive digital solutions and innovative tech services. Contact us to transform your business with cutting-edge technology solutions.",
   metadataBase: new URL('https://techlumina.com'),
@@ -69,6 +72,7 @@ export default function RootLayout({
     <html lang="en" className={`${eightgon.variable}`}>
       <head>
       <meta name="google-site-verification" content="uLtKm0rtFybjBOrF31A5JCP2jnVwVBX8UsjxY7ZcBm4" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
       <body className="font-eightgon antialiased bg-navy text-light-gray">
         <Navbar />

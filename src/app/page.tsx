@@ -6,7 +6,7 @@ import MatrixRain from '@/components/MatrixRain';
 import ServiceCard from '@/components/ServiceCard';
 import Button from '@/components/Button';
 import GlassImage from '@/components/GlassImage';
-import { FaCode, FaPencilRuler, FaChartLine, FaUserCog, FaLaptopCode, FaHeadset } from 'react-icons/fa';
+import { FaCode, FaPencilRuler, FaChartLine, FaUserCog, FaLaptopCode, FaHeadset, FaSearch } from 'react-icons/fa';
 
 // JSON-LD structured data for better SEO
 const jsonLd = {
@@ -23,7 +23,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Tech Lumina',
-    description: 'Your trusted partner for innovative digital solutions and technology services.',
+    description: 'Your trusted partner for innovative digital solutions, SEO optimization, and technology services. We deliver comprehensive web development, UI/UX design, and search engine optimization solutions.',
     image: '/images/modern-workspace.jpg',
     url: 'https://techlumina.com',
     sameAs: [
@@ -32,7 +32,7 @@ const jsonLd = {
       'https://github.com/techlumina'
     ],
     areaServed: 'Worldwide',
-    serviceType: ['Digital Solutions', 'Technology Services', 'Tech Consulting', 'Education Consultancy']
+    serviceType: ['Digital Solutions', 'Technology Services', 'Tech Consulting', 'SEO Optimization', 'Web Development', 'UI/UX Design']
   }
 };
 
@@ -73,7 +73,7 @@ export default function Home() {
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <ServiceCard
                 icon={<FaCode className="w-full h-full" />}
                 title="Web Development"
@@ -88,6 +88,11 @@ export default function Home() {
                 icon={<FaChartLine className="w-full h-full" />}
                 title="Digital Strategy"
                 description="Strategic planning and consulting for your digital transformation journey."
+              />
+              <ServiceCard
+                icon={<FaSearch className="w-full h-full" />}
+                title="SEO Optimization"
+                description="Boost your online visibility with advanced SEO strategies and performance optimization."
               />
             </div>
           </div>

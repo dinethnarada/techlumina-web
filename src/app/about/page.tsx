@@ -19,7 +19,7 @@ export default function About() {
                 Tech Lumina is a forward-thinking web development company dedicated to creating powerful, scalable, and innovative web applications. Our mission is to transform your digital ideas into reality through cutting-edge technology and exceptional design.
               </p>
               <p className="text-lg text-light-gray/80">
-                With a team of experienced developers and designers, we specialize in delivering custom web solutions that help businesses thrive in the digital age.
+                With a team of experienced developers and designers, we specialize in delivering custom web solutions that help businesses thrive in the digital age. Our expertise spans across front-end development, back-end systems, and modern design practices, ensuring we deliver high-quality solutions for every project.
               </p>
             </div>
             <div className="h-[300px]">
