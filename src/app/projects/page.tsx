@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Button from '@/components/Button';
 
 export default function Projects() {
@@ -48,7 +47,7 @@ export default function Projects() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Our Projects</h2>
           <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
-            Explore our portfolio of successful projects where we've helped businesses transform their digital presence.
+            Explore our portfolio of successful projects where we&apos;ve helped businesses transform their digital presence.
           </p>
         </div>
       </section>
@@ -115,7 +114,7 @@ export default function Projects() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4 text-navy">Have a Project in Mind?</h2>
           <p className="text-xl text-blue-gray mb-8">
-            Let's discuss how we can help you achieve your digital goals.
+            Let&apos;s discuss how we can help you achieve your digital goals.
           </p>
           <Button variant="light" href="/contact">
             Start a Project

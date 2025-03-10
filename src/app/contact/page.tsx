@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import Button from '@/components/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -66,7 +66,7 @@ export default function Contact() {
                 <span className="text-4xl text-medium-blue">✓</span>
               </div>
               <h4 className="text-xl font-semibold mb-2">Message Sent!</h4>
-              <p className="text-light-gray/80">Thank you for reaching out. We'll get back to you soon.</p>
+              <p className="text-light-gray/80">Thank you for reaching out. We&apos;ll get back to you soon.</p>
             </motion.div>
           </>
         )}
@@ -76,7 +76,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Get in Touch</h2>
           <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
-            Ready to start your next project? Contact us today and let's discuss how we can help bring your vision to life.
+            Ready to start your next project? Contact us today and let&apos;s discuss how we can help bring your vision to life.
           </p>
         </div>
       </section>

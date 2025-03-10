@@ -107,7 +107,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4 text-navy">Ready to Start Your Project?</h2>
           <p className="text-xl text-blue-gray mb-8">
-            Let's discuss how we can help bring your vision to life.
+            Let&apos;s discuss how we can help bring your vision to life.
           </p>
           <Button variant="light" href="/contact">
             Get in Touch
