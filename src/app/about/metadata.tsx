@@ -7,12 +7,10 @@ export const metadata: Metadata = {
     'about tech lumina', 'web development company', 'tech company profile',
     'software development team', 'web solutions provider', 'digital agency expertise',
     'web development experience', 'professional web developers', 'tech lumina team',
-    'web development portfolio', 'development methodology', 'company values',
-    'tech lumina mission', 'development process', 'quality assurance',
-    'client success stories', 'industry experience', 'technical expertise',
+    'web development portfolio', 'company values',
+    'tech lumina mission', 'quality assurance', 'technical expertise',
     'development standards', 'web development best practices', 'innovation focus',
-    'technology stack', 'affordable prices', 'project management',
-    'company culture', 'development philosophy', 'client testimonials'
+    'affordable prices', 'project management', 'development philosophy'
   ],
   openGraph: {
     type: 'website',

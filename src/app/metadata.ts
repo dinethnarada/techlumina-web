@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'enterprise web solutions', 'ecommerce development', 'web optimization',
     'website maintenance', 'website security', 'performance optimization',
     'SEO friendly websites', 'modern web technologies', 'scalable web applications',
-    'tech lumina', 'digital solutions', 'technology services', 'web consulting',
+    'tech lumina startup', 'digital solutions', 'technology services', 'web consulting',
     'website analytics', 'user experience design', 'digital transformation'
   ],
   openGraph: {
