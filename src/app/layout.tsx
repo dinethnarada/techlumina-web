@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     icon: '/favicon.ico'
   },
   title: `Tech Lumina | Digital Solutions & Technology Services`,
-  description: "Tech Lumina delivers comprehensive digital solutions and innovative tech services. Contact us to transform your business with cutting-edge technology solutions.",
+  description: "Tech Lumina is a cutting-edge web development agency specializing in creating powerful, scalable, and innovative web applications. We're dedicated to Crafting Tomorrow's Websites, Today.",
   metadataBase: new URL('https://techlumina.com'),
   keywords: ['tech lumina', 'digital solutions', 'technology services', 'tech solutions', 'digital technology', 'tech services', 'contact tech lumina', 'innovative solutions'],
   authors: [{ name: 'Tech Lumina Team' }],
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://techlumina.com',
-    title: 'Tech Lumina | Digital Solutions & Technology Services',
-    description: "Tech Lumina delivers comprehensive digital solutions and innovative tech services. Contact us to transform your business with cutting-edge technology solutions.",
+    title: 'Tech Lumina | Modern Web Development Agency - Home',
+    description: "Tech Lumina is a cutting-edge web development agency specializing in creating powerful, scalable, and innovative web applications. We're dedicated to Crafting Tomorrow's Websites, Today.",
     siteName: 'Tech Lumina',
     images: [{
       url: '/og-image.jpg',
