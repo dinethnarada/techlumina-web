@@ -48,9 +48,9 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <MatrixRain />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-6xl md:text-7xl font-bold mb-4 font-norwester text-light-gray">
+          <h2 className="text-6xl md:text-7xl font-bold mb-4 font-norwester text-light-gray">
             <LogoText />
-          </h1>
+          </h2>
           <p className="text-2xl md:text-3xl mb-8 font-norwester tracking-wide text-light-gray/80">
             <TypewriterText 
               text="Crafting Tomorrow's Websites, Today"
@@ -67,7 +67,7 @@ export default function Home() {
       <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-navy">Digital Solutions & Tech Services</h2>
+            <h1 className="text-4xl font-bold mb-4 text-navy">Digital Solutions & Tech Services</h1>
             <p className="text-xl text-blue-gray max-w-2xl mx-auto">
               Transforming businesses with innovative technology solutions and digital excellence
             </p>

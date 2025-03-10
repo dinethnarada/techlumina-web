@@ -12,7 +12,7 @@ export default function About() {
       {/* About Hero Section */}
       <section className="relative py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">About Tech Lumina</h1>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">About Tech Lumina</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
             <div>
               <p className="text-lg text-light-gray/80 mb-6">

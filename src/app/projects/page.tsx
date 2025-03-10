@@ -46,7 +46,7 @@ export default function Projects() {
       {/* Projects Hero Section */}
       <section className="relative py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Our Projects</h1>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Our Projects</h2>
           <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
             Explore our portfolio of successful projects where we've helped businesses transform their digital presence.
           </p>

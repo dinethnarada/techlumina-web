@@ -23,7 +23,7 @@ export default function LogoText({ size = 'large' }: LogoTextProps) {
     <div className={`space-y-${size === 'small' ? '1' : '2'} relative`}>
       <div className="absolute inset-0 bg-gradient-radial from-medium-blue/5 via-navy/5 to-transparent animate-gradient-shift rounded-full blur-xl" />
       <div className="absolute inset-0 bg-gradient-radial from-blue-gray/5 via-medium-blue/5 to-transparent animate-gradient-shift-delayed rounded-full blur-xl" />
-      <h1 className={`${textSizes[size].main} font-eightgon tracking-wide flex justify-center items-center relative`}>
+      <h2 className={`${textSizes[size].main} font-eightgon tracking-wide flex justify-center items-center relative`}>
         {mainText.split('').map((char, index) => (
           <span key={index} className="relative px-[1px]">
             {char === ' ' ? '\u00A0' : (
@@ -51,7 +51,7 @@ export default function LogoText({ size = 'large' }: LogoTextProps) {
             )}
           </span>
         ))}
-      </h1>
+      </h2>
       <h2 className={`${textSizes[size].sub} font-eightgon tracking-wide flex justify-center items-center relative`}>
         {subText.split('').map((char, index) => (
           <span key={index} className="relative px-[1px]">
