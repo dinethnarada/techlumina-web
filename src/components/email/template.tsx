@@ -31,12 +31,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                 padding: '24px',
                 textAlign: 'center' as const,
             }}>
-                <h1 style={{
+                <h2 style={{
                     color: '#ffffff',
                     margin: '0',
                     fontSize: '24px',
                     fontFamily: 'Arial, sans-serif',
-                }}>Contact Form Submission</h1>
+                }}>Contact Form Submission</h2>
             </div>
 
             {/* Content */}

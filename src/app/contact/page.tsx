@@ -74,7 +74,7 @@ export default function Contact() {
       {/* Contact Hero Section */}
       <section className="relative py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Get in Touch</h1>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-light-gray">Get in Touch</h2>
           <p className="text-xl text-light-gray/80 text-center mb-12 max-w-3xl mx-auto">
             Ready to start your next project? Contact us today and let's discuss how we can help bring your vision to life.
           </p>
