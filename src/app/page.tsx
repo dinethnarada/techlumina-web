@@ -1,7 +1,5 @@
 'use client';
-import Image from 'next/image';
-import TypewriterText from '@/components/TypewriterText';
-import LogoText from '@/components/LogoText';
+import TypewriterText from '@/components/TypewriterText';import LogoText from '@/components/LogoText';
 import MatrixRain from '@/components/MatrixRain';
 import ServiceCard from '@/components/ServiceCard';
 import Button from '@/components/Button';
@@ -155,7 +153,7 @@ export default function Home() {
       <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4 text-navy">Contact Tech Lumina Today</h2>
-          <p className="text-xl text-blue-gray mb-8">Let's create innovative digital solutions together.</p>
+          <p className="text-xl text-blue-gray mb-8">Let&apos;s create innovative digital solutions together.</p>
           <Button variant="light" href="/contact">
             Contact Us
           </Button>
