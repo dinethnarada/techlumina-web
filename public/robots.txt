@@ -6,20 +6,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://tech-lumina.com/sitemap.xml
-
-# Main pages
-Allow: /about
-Allow: /projects
-Allow: /contact
-
-# Static assets
-Allow: /images/
-Allow: /fonts/
-
-# Prevent crawling of API routes and internal paths
-Disallow: /api/
-Disallow: /_next/
-Disallow: /*.json$
-
-# Crawl delay to prevent overwhelming the server
-Crawl-delay: 10
