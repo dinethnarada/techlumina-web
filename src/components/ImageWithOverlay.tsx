@@ -14,10 +14,13 @@ const ImageWithOverlay: FC<ImageWithOverlayProps> = ({
   className = '',
   priority = false 
 }) => {
+  // Ensure the image source is defined to avoid hydration issues
+  const imageSrc = typeof src === 'string' ? src : '';
+
   return (
-    <div className={`relative h-full w-full overflow-hidden ${className}`}>
+    <div className={`relative h-full w-full overflow-hidden ${className}`}> 
       <Image
-        src={src}
+        src={imageSrc}
         alt={alt}
         fill
         className="object-cover object-center"
