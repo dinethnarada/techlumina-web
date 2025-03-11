@@ -16,8 +16,8 @@ const MatrixRain = () => {
 
     let animationFrameId: number;
     let lastTime = 0;
-    const fps = isMobile ? 10 : 30; // Lower FPS on mobile
-    const density = isMobile ? 0.2 : 1; // Reduce density on mobile
+    const fps = isMobile ? 20 : 30; // Lower FPS on mobile
+    const density = isMobile ? 0.5 : 1; // Reduce density on mobile
     const fpsInterval = 1000 / fps;
 
     // Set canvas size to match container size
@@ -25,11 +25,15 @@ const MatrixRain = () => {
       const container = canvas.parentElement;
       if (!container) return;
       
-      canvas.width = container.clientWidth;
-      canvas.height = container.clientHeight;
+      // Set maximum dimensions for mobile
+      const maxWidth = isMobile ? 360 : container.clientWidth;
+      const maxHeight = isMobile ? 640 : container.clientHeight;
       
-      canvas.style.width = `${container.clientWidth}px`;
-      canvas.style.height = `${container.clientHeight}px`;
+      canvas.width = Math.min(container.clientWidth, maxWidth);
+      canvas.height = Math.min(container.clientHeight, maxHeight);
+      
+      canvas.style.width = `${canvas.width}px`;
+      canvas.style.height = `${canvas.height}px`;
     };
     
     resize();
@@ -99,7 +103,7 @@ const MatrixRain = () => {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, [isMobile]);
+  }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden">
