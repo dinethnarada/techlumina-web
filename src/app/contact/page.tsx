@@ -99,7 +99,7 @@ export default function Contact() {
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📧
                     </span>
-                    <span>techlumina25@gmail.com</span>
+                    <span>contact@tech-lumina.com</span>
                   </p>
                   <p className="flex items-center space-x-3 text-blue-gray">
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
