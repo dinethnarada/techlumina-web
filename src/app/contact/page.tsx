@@ -105,7 +105,7 @@ export default function Contact() {
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-medium-blue/20">
                       📱
                     </span>
-                    <span>+94 (078) 869-286</span>
+                    <span>+94 (078) 869-5286</span>
                   </p>
                 </div>
               </div>
