@@ -47,7 +47,6 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-medium-blue/20 flex flex-col items-center gap-2">
-          <p className="text-light-gray/80 text-center">Looking for internship opportunities? Visit our education consultancy services to kickstart your career journey.</p>
           <div className="flex gap-6">
             <Link
               href="https://www.linkedin.com/company/tech-lumina/"

@@ -16,10 +16,10 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
             <div>
               <p className="text-lg text-light-gray/80 mb-6">
-                Tech Lumina is a forward-thinking web development company dedicated to creating powerful, scalable, and innovative web applications. Our mission is to transform your digital ideas into reality through cutting-edge technology and exceptional design.
+                We are a bunch of innovative and creative minds dedicated to designing and developing scalable, durable web solutions bespoked to meet the your unique demands. We bring your dream of stepping into the digital world a reality through bleeding-edge technologies and exceptional design.
               </p>
               <p className="text-lg text-light-gray/80">
-                With a team of experienced developers and designers, we specialize in delivering custom web solutions that help businesses thrive in the digital age. Our expertise spans across front-end development, back-end systems, and modern design practices, ensuring we deliver high-quality solutions for every project.
+              We are ready to take on the responsibility of driving large-scale digital transformation for your business. We can cater to meeting your budget and timeline requirements. Our out-of-the-box thinking, combined with expertise across all tiers of web application development—including, but not limited to, architectural design, front-end, and back-end implementation—guarantees an enterprise-grade solution.
               </p>
             </div>
             <div className="h-[300px]">
@@ -49,17 +49,17 @@ export default function About() {
               <ValueCard
                 icon={<FaLightbulb className="w-full h-full" />}
                 title="Innovation"
-                description="We stay at the forefront of technology, constantly exploring new solutions to deliver the best results."
+                description="We thrive to keep the technology used at Tech Lumina upto date while utilising modern best practices and solutions."
               />
               <ValueCard
                 icon={<FaStar className="w-full h-full" />}
                 title="Excellence"
-                description="We strive for excellence in every project, ensuring the highest quality in our deliverables."
+                description="Excellence is the key at Tech Lumina. We ensure that every project we deliver meets your business, budget, and timeline requirements."
               />
               <ValueCard
                 icon={<FaHandshake className="w-full h-full" />}
                 title="Partnership"
-                description="We build long-lasting relationships with our clients, working together to achieve their goals."
+                description="We value collaborative relationships with our partners, ensuring mutual respect and understanding as we work toward achieving our shared goals."
               />
             </div>
           </div>
@@ -80,22 +80,22 @@ export default function About() {
               <ApproachCard
                 icon={<FaSearch className="w-full h-full" />}
                 title="Discovery & Planning"
-                description="We begin each project with a thorough understanding of your needs and objectives. Our team works closely with you to develop a comprehensive plan that aligns with your goals."
+                description="It&apos;s talking time! We will have thorough discussions with you to understand your business, budget, and timeline requirements. We will work closely with you throughout the development process to ensure alignment with your evolving needs."
               />
               <ApproachCard
                 icon={<FaPencilRuler className="w-full h-full" />}
                 title="Design & Development"
-                description="Our expert team combines creative design with robust development practices to create solutions that are both beautiful and functional."
+                description="It&apos;s show time! Our experts will begin building your dream using cutting-edge technologies and industry best practices, all while brainstorming innovative ideas."
               />
               <ApproachCard
                 icon={<FaCheckCircle className="w-full h-full" />}
                 title="Testing & Deployment"
-                description="We rigorously test all applications to ensure they meet our high standards of quality and performance before deployment."
+                description="It&apos;s rehersal time and Opening night! We will rigorously test the application for all its functional and non-functional requirements and obtain your approval. Once you&apos;re satisfied, your application will go live!"
               />
               <ApproachCard
                 icon={<FaTools className="w-full h-full" />}
                 title="Support & Maintenance"
-                description="Our commitment doesn't end at launch. We provide ongoing support and maintenance to ensure your application continues to perform optimally."
+                description="It&apos;s time for Encore! We are still with you. We will make sure your application runs smoothly and optimally while seamlessly integrating any new requirements and changes."
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-navy">Ready to Start Your Project?</h2>
+          <h2 className="text-4xl font-bold mb-4 text-navy">Ready to lead the digital era?</h2>
           <p className="text-xl text-blue-gray mb-8">
             Let&apos;s discuss how we can help bring your vision to life.
           </p>
