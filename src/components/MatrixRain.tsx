@@ -16,8 +16,8 @@ const MatrixRain = () => {
 
     let animationFrameId: number;
     let lastTime = 0;
-    const fps = isMobile ? 10 : 30; // Lower FPS on mobile
-    const density = isMobile ? 0.2 : 1; // Reduce density on mobile
+    const fps = 30; // Lower FPS on mobile
+    const density = 1; // Reduce density on mobile
     const fpsInterval = 1000 / fps;
 
     // Set canvas size to match container size
@@ -37,12 +37,12 @@ const MatrixRain = () => {
     // Matrix characters (mix of Latin and katakana)
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789アイウエオカキクケコサシスセソタチツテト'.split('');
     
-    const fontSize = 16;
+    const fontSize = 36;
     let columns = Math.floor(canvas.width / fontSize);
     let drops = Array(columns).fill(0);
     let positions = Array(columns).fill(0);
     
-    const speed = 0.5; // Controls rain drop speed
+    const speed = 0.2; // Controls rain drop speed
     
     // Animation loop
     const draw = (currentTime: number) => {
@@ -103,7 +103,7 @@ const MatrixRain = () => {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {isVisible && (
+      {isVisible && !isMobile && (
         <canvas
           ref={canvasRef}
           className="w-full h-full"
