@@ -80,7 +80,7 @@ export default function Home() {
               <ServiceCard
                 icon={<FaPencilRuler className="w-full h-full" />}
                 title="UI/UX Design"
-                description="Attract more customers into your business. We enhance customer experiences and engagement in your web application with intutive user interfaces."
+                description="Attract more customers into your business. We enhance customer experiences and engagement in your web application with intuitive user interfaces."
               />
               <ServiceCard
                 icon={<FaChartLine className="w-full h-full" />}
