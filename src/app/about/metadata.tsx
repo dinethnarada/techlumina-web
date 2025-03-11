@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'web development portfolio', 'company values',
     'tech lumina mission', 'quality assurance', 'technical expertise',
     'development standards', 'web development best practices', 'innovation focus',
-    'affordable prices', 'project management', 'development philosophy'
+    'affordable prices', 'project management', "lumina tech"
   ],
   openGraph: {
     type: 'website',

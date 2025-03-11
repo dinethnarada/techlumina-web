@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'website maintenance', 'website security', 'performance optimization',
     'SEO friendly websites', 'modern web technologies', 'scalable web applications',
     'tech lumina startup', 'digital solutions', 'technology services', 'web consulting',
-    'website analytics', 'user experience design', 'digital transformation'
+    'website analytics', 'user experience design', 'digital transformation', "lumina tech"
   ],
   openGraph: {
     title: 'Tech Lumina | Digital Solutions & Technology Services',
