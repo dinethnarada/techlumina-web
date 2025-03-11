@@ -9,7 +9,8 @@ import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/favicon.ico'
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
   },
   title: `Tech Lumina | Digital Solutions & Technology Services`,
   description: "Tech Lumina is a cutting-edge web development agency specializing in creating powerful, scalable, and innovative web applications. We're dedicated to Crafting Tomorrow's Websites, Today.",
