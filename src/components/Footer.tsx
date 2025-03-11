@@ -40,7 +40,7 @@ const Footer = () => {
             <ul className="space-y-2 text-light-gray/80">
               <li>Tech Lumina</li>
               <li>Silicon Valley, SriLanka</li>
-              <li>techlumina25@gmail.com</li>
+              <li>contact@tech-lumina.com</li>
               <li>+94 (078) 869-5286</li>
             </ul>
           </div>
