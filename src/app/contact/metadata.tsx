@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'digital solutions contact', 'tech support contact', 'web development help',
     'web development consultation', 'tech lumina support', 'development team contact',
     'professional web developers', 'web development agency contact', 'tech consultation',
-    'digital agency contact', 'web development partnership', 'project discussion',
+    'digital agency contact', 'web development partnership', 'project discussion', "lumina tech",
     'web consultation'
   ],
   openGraph: {
