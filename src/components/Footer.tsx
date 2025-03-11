@@ -50,7 +50,7 @@ const Footer = () => {
           <p className="text-light-gray/80 text-center">Looking for internship opportunities? Visit our education consultancy services to kickstart your career journey.</p>
           <div className="flex gap-6">
             <Link
-              href="https://www.linkedin.com/company/tech-lumina"
+              href="https://www.linkedin.com/company/tech-lumina/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-light-gray hover:text-medium-blue transition-colors"
@@ -58,7 +58,7 @@ const Footer = () => {
               LinkedIn
             </Link>
             <Link
-              href="https://www.facebook.com/profile.php?id=61574022870797"
+              href="https://www.facebook.com/share/15sQydUqcC/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-light-gray hover:text-medium-blue transition-colors"
