@@ -41,7 +41,7 @@ const Footer = () => {
               <li>Tech Lumina</li>
               <li>Silicon Valley, SriLanka</li>
               <li>techlumina25@gmail.com</li>
-              <li>+94 (078) 869-286</li>
+              <li>+94 (078) 869-5286</li>
             </ul>
           </div>
         </div>
