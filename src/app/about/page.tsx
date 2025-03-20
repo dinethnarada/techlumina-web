@@ -2,8 +2,8 @@
 
 import ValueCard from '@/components/ValueCard';
 import ApproachCard from '@/components/ApproachCard';
-import Button from '@/components/Button';
 import GlassImage from '@/components/GlassImage';
+import TeamMemberCard from '@/components/TeamMemberCard';
 import { FaLightbulb, FaStar, FaHandshake, FaSearch, FaPencilRuler, FaCheckCircle, FaTools } from 'react-icons/fa';
 
 export default function About() {
@@ -25,7 +25,7 @@ export default function About() {
             <div className="h-[300px]">
               <GlassImage
                 src="/images/about-tech-lumina.jpg"
-                alt="Tech Lumina's innovative workspace"
+                alt="Tech Lumina's collaborative development workspace"
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 quality={90}
@@ -35,12 +35,53 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Who We Are Section */}
       <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-navy">Our Values</h2>
+            <h2 className="text-4xl font-bold mb-4 text-navy">Who We Are</h2>
             <p className="text-xl text-blue-gray max-w-2xl mx-auto">
+              Meet our team of dedicated professionals
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <TeamMemberCard
+                name="Yasiru Rathnayaka"
+                title="Associate Technical Lead at Sysco Labs (Pvt) Ltd"
+                imageSrc="/images/yasiru.jpg"
+                linkedinUrl="https://www.linkedin.com/in/yasiru-rathnayaka/"
+                imagePosition="down"
+              />
+              <TeamMemberCard
+                name="Thisun Dayarathna"
+                title="Senior Software Engineer at Sysco Labs (Pvt) Ltd"
+                imageSrc="/images/thisun.jpg"
+                linkedinUrl="https://www.linkedin.com/in/thisundayarathna/"
+              />
+              <TeamMemberCard
+                name="Savindu Ekanayake"
+                title="Senior Software Engineer at Sysco Lab (Pvt) Ltds"
+                imageSrc="/images/savindu.jpg"
+                linkedinUrl="https://www.linkedin.com/in/savinduekanayake/"
+              />
+              <TeamMemberCard
+                name="Dineth Athapaththu"
+                title="Senior Software Engineer at Sysco Labs (Pvt) Ltd"
+                imageSrc="/images/dineth.jpg"
+                linkedinUrl="https://www.linkedin.com/in/dineth-athapaththu/"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-24 px-4 md:px-8 bg-navy">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-light-gray">Our Values</h2>
+            <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
               Guided by principles that drive innovation and excellence
             </p>
           </div>
@@ -67,11 +108,11 @@ export default function About() {
       </section>
 
       {/* Approach Section */}
-      <section className="py-24 px-4 md:px-8 bg-navy">
+      <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-light-gray">Our Approach</h2>
-            <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-navy">Our Approach</h2>
+            <p className="text-xl text-blue-gray max-w-2xl mx-auto">
               A systematic process that ensures success in every project
             </p>
           </div>
@@ -99,19 +140,6 @@ export default function About() {
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 px-4 md:px-8 bg-light-gray">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-navy">Ready to lead the digital era?</h2>
-          <p className="text-xl text-blue-gray mb-8">
-            Let&apos;s discuss how we can help bring your vision to life.
-          </p>
-          <Button variant="light" href="/contact">
-            Get in Touch
-          </Button>
         </div>
       </section>
     </main>

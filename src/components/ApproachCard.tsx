@@ -14,13 +14,13 @@ const ApproachCard = ({ title, description, icon }: ApproachCardProps) => {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-medium-blue/[0.001] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-lg" />
       <div className="relative z-10">
-        <div className="w-12 h-12 mb-4 text-medium-blue transition-colors duration-300 ease-out group-hover:text-light-gray">
+        <div className="w-12 h-12 mb-4 text-medium-blue transition-colors duration-300 ease-out group-hover:text-navy">
           {icon}
         </div>
-        <h3 className="text-xl font-bold mb-3 text-light-gray transition-colors duration-300 ease-out">
+        <h3 className="text-xl font-bold mb-3 text-navy transition-colors duration-300 ease-out">
           {title}
         </h3>
-        <p className="text-light-gray/80 transition-colors duration-300 ease-out">
+        <p className="text-blue-gray transition-colors duration-300 ease-out">
           {description}
         </p>
       </div>
