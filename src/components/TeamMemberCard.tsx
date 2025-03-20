@@ -29,13 +29,13 @@ export default function TeamMemberCard({ name, title, imageSrc, linkedinUrl, ima
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <h3 className="text-xl font-semibold mb-2 text-light-gray">{name}</h3>
-      <p className="text-light-gray/80 mb-4">{title}</p>
+      <h3 className="text-xl font-semibold mb-2 text-navy">{name}</h3>
+      <p className="text-blue-gray mb-4">{title}</p>
       <a
         href={linkedinUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center text-medium-blue hover:text-blue-gray transition-colors"
+        className="inline-flex items-center text-medium-blue hover:text-navy transition-colors"
       >
         <FaLinkedin className="w-6 h-6" />
       </a>

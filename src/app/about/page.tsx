@@ -25,8 +25,8 @@ export default function About() {
             </div>
             <div className="h-[300px]">
               <GlassImage
-                src="/images/about-tech-lumina.jpg"
-                alt="Tech Lumina's innovative workspace"
+                src="/images/web-development-team.jpg"
+                alt="Tech Lumina's collaborative development workspace"
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 quality={90}
@@ -37,11 +37,11 @@ export default function About() {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-24 px-4 md:px-8 bg-navy">
+      <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-light-gray">Who We Are</h2>
-            <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-navy">Who We Are</h2>
+            <p className="text-xl text-blue-gray max-w-2xl mx-auto">
               Meet our team of dedicated professionals
             </p>
           </div>
@@ -78,11 +78,11 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 px-4 md:px-8 bg-light-gray">
+      <section className="py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-navy">Our Values</h2>
-            <p className="text-xl text-blue-gray max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-light-gray">Our Values</h2>
+            <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
               Guided by principles that drive innovation and excellence
             </p>
           </div>
@@ -109,11 +109,11 @@ export default function About() {
       </section>
 
       {/* Approach Section */}
-      <section className="py-24 px-4 md:px-8 bg-navy">
+      <section className="py-24 px-4 md:px-8 bg-light-gray">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-light-gray">Our Approach</h2>
-            <p className="text-xl text-light-gray/80 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-navy">Our Approach</h2>
+            <p className="text-xl text-blue-gray max-w-2xl mx-auto">
               A systematic process that ensures success in every project
             </p>
           </div>
@@ -141,19 +141,6 @@ export default function About() {
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 px-4 md:px-8 bg-light-gray">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-navy">Ready to lead the digital era?</h2>
-          <p className="text-xl text-blue-gray mb-8">
-            Let&apos;s discuss how we can help bring your vision to life.
-          </p>
-          <Button variant="light" href="/contact">
-            Get in Touch
-          </Button>
         </div>
       </section>
     </main>
