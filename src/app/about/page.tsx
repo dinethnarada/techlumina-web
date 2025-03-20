@@ -24,7 +24,7 @@ export default function About() {
             </div>
             <div className="h-[300px]">
               <GlassImage
-                src="/images/about-tech-lumina.jpg"
+                src="/images/about-us-2.jpg"
                 alt="Tech Lumina's collaborative development workspace"
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
