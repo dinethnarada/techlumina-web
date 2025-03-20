@@ -2,7 +2,6 @@
 
 import ValueCard from '@/components/ValueCard';
 import ApproachCard from '@/components/ApproachCard';
-import Button from '@/components/Button';
 import GlassImage from '@/components/GlassImage';
 import TeamMemberCard from '@/components/TeamMemberCard';
 import { FaLightbulb, FaStar, FaHandshake, FaSearch, FaPencilRuler, FaCheckCircle, FaTools } from 'react-icons/fa';
@@ -25,7 +24,7 @@ export default function About() {
             </div>
             <div className="h-[300px]">
               <GlassImage
-                src="/images/web-development-team.jpg"
+                src="/images/about-tech-lumina.jpg"
                 alt="Tech Lumina's collaborative development workspace"
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
