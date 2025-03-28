@@ -30,8 +30,6 @@ const Footer = () => {
               <li>UI/UX Design</li>
               <li>Mobile Apps</li>
               <li>Cloud Solutions</li>
-              <li>Education Consultancy</li>
-              <li>Internship Guidance</li>
             </ul>
           </div>
           
@@ -39,7 +37,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold">Contact</h3>
             <ul className="space-y-2 text-light-gray/80">
               <li>Tech Lumina</li>
-              <li>Silicon Valley, SriLanka</li>
+              <li>Colombo, SriLanka</li>
               <li>contact@tech-lumina.com</li>
               <li>+94 (078) 869-5286</li>
             </ul>
